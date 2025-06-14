@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import RoutineSelector from "@/components/routines/RoutineSelector";
+import { RoutineSelector } from "@/components/home";
 
 export const metadata: Metadata = {
   title: "GymTrack - 당신의 헬스 루틴을 기록하세요",
