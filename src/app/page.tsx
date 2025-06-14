@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { RoutineSelector } from "@/components/home";
+import { DashboardCards } from "@/components/home";
 
 export const metadata: Metadata = {
   title: "GymTrack - 당신의 헬스 루틴을 기록하세요",
@@ -14,13 +14,13 @@ const Home = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            추천 루틴
+            오늘의 운동
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg font-medium">
-            당신의 목표에 맞는 최적의 루틴을 선택하세요
+            운동 기록을 시작하고 성장을 확인하세요
           </p>
         </div>
-        <RoutineSelector />
+        <DashboardCards />
       </div>
     </div>
   );
