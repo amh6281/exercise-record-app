@@ -2,19 +2,16 @@ import Image from "next/image";
 
 const MainHeader = () => {
   return (
-    <header className="flex flex-col items-center gap-4 text-center">
+    <header className="flex flex-col items-center text-center">
       <Image
-        src="/logo.svg"
+        src="/logo.png"
         alt="GymTrack 로고"
-        width={80}
-        height={80}
-        className="dark:invert"
+        width={200}
+        height={200}
+        className="w-[150px] md:w-[150px] lg:w-[200px] h-auto dark:invert"
         priority
       />
-      <h1 className="text-4xl text-primary font-bold tracking-tight bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-        GymTrack
-      </h1>
-      <p className="text-lg text-gray-600 dark:text-gray-300 max-w-md">
+      <p className="text-lg font-medium text-gray-600 dark:text-gray-300 max-w-md">
         헬린이를 위한 맞춤형 운동 루틴과 기록 서비스
       </p>
     </header>
