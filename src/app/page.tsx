@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import { Footer } from "@/components/layout";
-import { CTA, Features, MainHeader, RoutineSelector } from "@/components/home";
+import RoutineSelector from "@/components/routines/RoutineSelector";
 
 export const metadata: Metadata = {
   title: "GymTrack - 당신의 헬스 루틴을 기록하세요",
@@ -11,12 +10,18 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <div className="min-h-screen px-4 py-8 sm:px-6 flex flex-col gap-12 items-center bg-background text-foreground">
-      <MainHeader />
-      <Features />
-      <RoutineSelector />
-      <CTA />
-      <Footer />
+    <div className="container mx-auto px-4 py-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+            추천 루틴
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 text-lg font-medium">
+            당신의 목표에 맞는 최적의 루틴을 선택하세요
+          </p>
+        </div>
+        <RoutineSelector />
+      </div>
     </div>
   );
 };
