@@ -1,25 +1,29 @@
-import Link from 'next/link';
 import { ROUTINE_CATEGORIES } from '@/constants/routineList';
+import RoutineSection from './RoutineSection';
 
 const RoutineList = () => {
   return (
-    <section className='w-full'>
-      <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4'>
-        {ROUTINE_CATEGORIES.map(({ label, slug, emoji }) => (
-          <Link
-            key={slug}
-            href={`/routines/${slug}`}
-            className='group flex flex-col items-center justify-center rounded-xl border-2 border-gray-200 p-6 transition-all duration-300 hover:scale-105 hover:border-primary hover:shadow-lg dark:border-gray-800 dark:hover:border-primary'
-          >
-            <span className='mb-3 transform text-3xl transition-transform duration-300 group-hover:scale-110'>
-              {emoji}
-            </span>
-            <span className='font-medium text-gray-800 transition-colors group-hover:text-primary dark:text-gray-200 dark:group-hover:text-primary'>
-              {label}
-            </span>
-          </Link>
-        ))}
-      </div>
+    <section className='w-full space-y-8 px-4 pb-8 sm:px-6 lg:px-8'>
+      <RoutineSection
+        title='분할 루틴'
+        description='주간 운동 분할에 따른 루틴을 선택하세요'
+        routines={ROUTINE_CATEGORIES.splitRoutines}
+      />
+      <RoutineSection
+        title='난이도별 루틴'
+        description='운동 경험과 실력에 맞는 루틴을 선택하세요'
+        routines={ROUTINE_CATEGORIES.levelRoutines}
+      />
+      <RoutineSection
+        title='부위별 루틴'
+        description='특정 부위를 집중적으로 훈련하고 싶다면 선택하세요'
+        routines={ROUTINE_CATEGORIES.bodyPartRoutines}
+      />
+      <RoutineSection
+        title='유명 보디빌더 루틴'
+        description='전설적인 보디빌더들의 루틴을 따라해보세요'
+        routines={ROUTINE_CATEGORIES.bodybuilderRoutines}
+      />
     </section>
   );
 };
