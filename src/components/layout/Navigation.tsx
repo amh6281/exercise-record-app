@@ -61,6 +61,29 @@ const Navigation = () => {
           </Link>
 
           <Link
+            href='/my-routines'
+            className={`flex h-full w-full flex-col items-center justify-center ${
+              isActive('/my-routines') ? 'text-orange-500' : 'text-gray-600 dark:text-gray-400'
+            }`}
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
+              />
+            </svg>
+            <span className='mt-1 text-xs'>나의 루틴</span>
+          </Link>
+
+          <Link
             href='/records'
             className={`flex h-full w-full flex-col items-center justify-center ${
               isActive('/records') ? 'text-orange-500' : 'text-gray-600 dark:text-gray-400'
