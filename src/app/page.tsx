@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: '헬스, 운동, 루틴, 3분할, 5분할, 운동기록, 헬린이',
 };
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='mx-auto max-w-4xl'>
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
