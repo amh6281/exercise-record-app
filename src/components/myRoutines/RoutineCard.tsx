@@ -7,7 +7,7 @@ interface RoutineCardProps {
 
 const RoutineCard = ({ title, description, exerciseCount, duration }: RoutineCardProps) => {
   return (
-    <div className='rounded-lg border p-6 shadow-sm'>
+    <div className='rounded-lg border border-gray-200 p-6 shadow-sm dark:border-gray-800'>
       <div className='mb-4 flex items-center justify-between'>
         <h3 className='text-lg font-semibold'>{title}</h3>
         <button className='text-gray-400 hover:text-gray-600'>
@@ -16,9 +16,9 @@ const RoutineCard = ({ title, description, exerciseCount, duration }: RoutineCar
           </svg>
         </button>
       </div>
-      <p className='text-muted-foreground mb-4 text-sm'>{description}</p>
+      <p className='mb-4 text-sm text-muted-foreground'>{description}</p>
       <div className='flex items-center justify-between text-sm'>
-        <span className='text-muted-foreground flex items-center gap-2'>
+        <span className='flex items-center gap-2 text-muted-foreground'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-5 w-5 text-primary'
@@ -35,7 +35,7 @@ const RoutineCard = ({ title, description, exerciseCount, duration }: RoutineCar
           </svg>
           {exerciseCount}개 운동
         </span>
-        <span className='text-muted-foreground flex items-center gap-2'>
+        <span className='flex items-center gap-2 text-muted-foreground'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-5 w-5 text-primary'
