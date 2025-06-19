@@ -59,6 +59,6 @@
   /* 기본 body 설정 */
   body {
     /* 테마 기반 배경/텍스트 색상 적용 */
-    @apply bg-default text-foreground;
+    @apply bg-secondary text-foreground;
   }
 }
