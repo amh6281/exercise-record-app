@@ -1,64 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-default: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: 1rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
 @layer base {
-  /* 🌞 Light Mode 색상 정의 */
-  :root {
-    /* 전체 배경 색상 (ex. body, section 등) */
-    --background: 0 0% 98%; /* 거의 흰색 */
-
-    /* 일반 텍스트 색상 (ex. 제목, 본문 등) */
-    --foreground: 240 10% 10%; /* 짙은 회색 */
-
-    /* 브랜드 주요 색상 (ex. 버튼, 강조 텍스트 등) */
-    --primary: 24 95% 56%; /* 주황색 계열 (#EA580C 근처) */
-
-    /* primary 배경 위의 텍스트 색상 (ex. 흰색 텍스트) */
-    --primary-foreground: 0 0% 100%;
-
-    /* 보조 배경 (ex. 카드 내부, 섹션 구분 영역) */
-    --secondary: 0 0% 100%; /* 흰색 */
-
-    /* 뮤트된 요소 배경 (ex. 비활성 버튼, 태그 배경 등) */
-    --muted: 0 0% 95%; /* 아주 연한 회색 */
-
-    /* 뮤트된 텍스트 색상 (ex. 보조 설명, 라벨 등) */
-    --muted-foreground: 240 4% 60%;
-
-    /* 테두리 색상 (ex. 카드, input, 구분선 등) */
-    --border: 240 5% 86%;
-
-    /* 카드 배경 (ex. 컨텐츠 박스, 섹션 등) */
-    --card: 0 0% 100%;
-
-    /* 카드 내 텍스트 색상 */
-    --card-foreground: 240 10% 10%;
-  }
-
-  /* 🌚 Dark Mode 색상 정의 (class="dark"가 body에 적용될 때 사용됨) */
-  .dark {
-    --background: 0 0% 6%; /* 거의 검정 */
-
-    --foreground: 0 0% 98%; /* 거의 흰색 */
-
-    --primary: 24 95% 56%; /* 주황색 유지 (same as light mode) */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 10%; /* 어두운 보조 배경 */
-
-    --muted: 0 0% 16%; /* 어두운 muted 배경 */
-    --muted-foreground: 0 0% 60%; /* 연한 회색 텍스트 */
-
-    --border: 0 0% 30%; /* 어두운 테두리 */
-
-    --card: 0 0% 12%; /* 카드 배경 */
-    --card-foreground: 0 0% 98%; /* 카드 내 텍스트 */
-  }
-
-  /* 기본 body 설정 */
-  body {
-    /* 테마 기반 배경/텍스트 색상 적용 */
-    @apply bg-secondary text-foreground;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
 }
