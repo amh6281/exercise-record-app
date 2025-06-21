@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const DashboardCards = () => {
+const DashboardCardList = () => {
   return (
     <div className='grid gap-6 md:grid-cols-2'>
       {/* 빠른 기록 시작 */}
@@ -42,4 +42,4 @@ const DashboardCards = () => {
   );
 };
 
-export default DashboardCards;
+export default DashboardCardList;
