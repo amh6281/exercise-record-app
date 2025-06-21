@@ -3,10 +3,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: var(--font-geist-sans), sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
-  --font-poppins: 'Poppins', sans-serif;
-
   --color-primary-50: #fffaf2;
   --color-primary-100: #ffebcf;
   --color-primary-200: #ffd2a0;

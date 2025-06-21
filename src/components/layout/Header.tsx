@@ -7,17 +7,17 @@ const Header = () => {
   const { isDarkMode, toggleTheme } = useThemeStore();
 
   return (
-    <header className='fixed left-0 right-0 top-0 z-50 border-b border-gray-200 bg-background dark:border-gray-800'>
+    <header className='dark:bg-choco-800 border-cool-200 dark:border-choco-700 fixed top-0 right-0 left-0 z-50 border-b bg-white'>
       <div className='mx-auto max-w-4xl px-4'>
         <div className='flex h-16 items-center justify-between'>
           <Link href='/' className='flex items-center space-x-2'>
-            <span className='text-xl font-bold text-primary'>GymTrack</span>
+            <span className='text-primary-500 dark:text-primary-400 text-xl font-bold'>GymTrack</span>
           </Link>
 
           <div className='flex items-center space-x-4'>
             <button
               onClick={toggleTheme}
-              className='p-2 text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary-dark'
+              className='hover:text-primary-500 dark:hover:text-primary-400 text-cool-600 dark:text-cool-300 p-2 transition-colors duration-200'
               aria-label={isDarkMode ? '라이트 모드로 전환' : '다크 모드로 전환'}
             >
               {isDarkMode ? (

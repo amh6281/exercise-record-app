@@ -1,3 +1,4 @@
+import { PageHeader } from '@/components/layout';
 import { RoutineCard } from '@/components/myRoutines';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -11,15 +12,11 @@ const MyRoutinesPage = () => {
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='mx-auto max-w-4xl'>
-        <div className='mb-12 text-center'>
-          <h1 className='mb-4 text-3xl font-bold text-primary md:text-4xl'>나의 루틴</h1>
-          <p className='text-lg font-medium text-gray-600 dark:text-gray-400'>내가 만든 운동 루틴을 관리하세요</p>
-        </div>
-
+        <PageHeader title='나의 루틴' description='내가 만든 운동 루틴을 관리하세요.' />
         <div className='mb-8 flex justify-end'>
           <Link
             href='/routines/new'
-            className='rounded-lg bg-primary px-4 py-2 text-white transition-colors hover:bg-primary-dark'
+            className='bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 rounded-lg px-4 py-2 text-white'
           >
             새 루틴 만들기
           </Link>

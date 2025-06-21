@@ -1,4 +1,4 @@
-import { ROUTINE_CATEGORIES } from '@/constants/routineList';
+import { ROUTINE_CATEGORIES } from '@/constants/RoutineList';
 import RoutineSection from './RoutineSection';
 
 const RoutineList = () => {

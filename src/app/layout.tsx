@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
           <Header />
-          <main className='min-h-screen pb-16 pt-16'>{children}</main>
+          <main className='min-h-screen pt-16 pb-16'>{children}</main>
           <Navigation />
         </ThemeProvider>
       </body>
