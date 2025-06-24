@@ -2,6 +2,7 @@ export const ROUTINE_CATEGORIES = {
   splitRoutines: [
     { label: '2분할', slug: 'two-split', emoji: '2️⃣' },
     { label: '3분할', slug: 'three-split', emoji: '3️⃣' },
+    { label: 'PPL', slug: 'ppl-split', emoji: '3️⃣' },
     { label: '4분할', slug: 'four-split', emoji: '4️⃣' },
     { label: '5분할', slug: 'five-split', emoji: '5️⃣' },
   ],

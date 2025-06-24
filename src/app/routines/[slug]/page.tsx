@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ROUTINE_CATEGORIES } from '@/constants/RoutineList';
 import { ROUTINE_DETAILS } from '@/constants/RoutineDetails';
-import { RoutineDetail } from '@/components/routines';
+import { RoutineDetail } from '@/components/routine';
 import { PageHeader } from '@/components/layout';
 
 interface RoutinePageProps {
@@ -28,7 +28,7 @@ export const generateMetadata = async ({ params }: RoutinePageProps): Promise<Me
 
 // 정적 경로 생성 (빌드 시 HTML 파일 미리 생성
 // generateStaticParams 제거 시 서버에서 매번 HTML 생성)
-// 마이페이지, 검색, 실시간 데이터 등은 동적 경로 생성
+// 마이페이지, 검색, 실시간 데이터 등은 동적 경로 생성, 사용자 별 다른 데이터가 아님.
 export const generateStaticParams = async () => {
   const allRoutines = [
     ...ROUTINE_CATEGORIES.splitRoutines,
