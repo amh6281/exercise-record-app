@@ -9,6 +9,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '분할 루틴',
     difficulty: 'beginner',
     estimatedTime: 60,
+    target: '전신',
     exercises: [
       {
         id: 'bench-press',
@@ -87,6 +88,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '분할 루틴',
     difficulty: 'intermediate',
     estimatedTime: 70,
+    target: '전신',
     exercises: [
       {
         id: 'bench-press',
@@ -166,6 +168,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '부위별 루틴',
     difficulty: 'intermediate',
     estimatedTime: 50,
+    target: '가슴',
     exercises: [
       {
         id: 'bench-press',
@@ -235,6 +238,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '난이도별 루틴',
     difficulty: 'beginner',
     estimatedTime: 40,
+    target: '전신',
     exercises: [
       {
         id: 'bodyweight-squats',
@@ -305,6 +309,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '유명 보디빌더 루틴',
     difficulty: 'advanced',
     estimatedTime: 70,
+    target: '가슴',
     exercises: [
       {
         id: 'bench-press',
@@ -354,6 +359,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '유명 보디빌더 루틴',
     difficulty: 'advanced',
     estimatedTime: 50,
+    target: '등',
     exercises: [
       {
         id: 'nautilus-pullover',
@@ -421,6 +427,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '분할 루틴',
     difficulty: 'intermediate',
     estimatedTime: 60,
+    target: '전신',
     exercises: [
       {
         id: 'day1-chest',
@@ -479,6 +486,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '분할 루틴',
     difficulty: 'intermediate',
     estimatedTime: 50,
+    target: '전신',
     exercises: [
       {
         id: 'push',
@@ -519,6 +527,7 @@ export const ROUTINE_DETAILS: Record<string, RoutineDetail> = {
     category: '부위별 루틴',
     difficulty: 'intermediate',
     estimatedTime: 45,
+    target: '등',
     exercises: [
       {
         id: 'deadlift',

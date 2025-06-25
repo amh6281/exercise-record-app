@@ -39,7 +39,7 @@ const RoutineStats = ({ routine }: RoutineStatsProps) => {
         <div className='flex items-center gap-3'>
           <div className='bg-primary-50 dark:bg-primary-900/20 flex items-center gap-2 rounded-lg px-3 py-2'>
             <TargetIcon size={16} className='text-primary-600 dark:text-primary-400' />
-            <span className='text-primary-700 dark:text-primary-300 text-sm font-medium'>전신 운동</span>
+            <span className='text-primary-700 dark:text-primary-300 text-sm font-medium'>{routine.target}</span>
           </div>
         </div>
         <span

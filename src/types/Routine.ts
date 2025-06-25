@@ -14,7 +14,8 @@ export interface RoutineDetail {
   description: string;
   category: string;
   difficulty: 'beginner' | 'intermediate' | 'advanced';
-  estimatedTime: number; // 분 단위
+  estimatedTime: number;
+  target: string;
   exercises: Exercise[];
   tips?: string[];
 }
