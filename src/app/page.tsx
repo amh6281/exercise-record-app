@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { DashboardCardList } from '@/components/home';
 import PageHeader from '@/components/layout/PageHeader';
+import { TodayDashboard } from '@/components/home';
 
 export const metadata: Metadata = {
   title: 'GymTrack - 당신의 헬스 루틴을 기록하세요',
@@ -15,7 +15,7 @@ const HomePage = () => {
         <div className='mb-12 text-center'>
           <PageHeader title='오늘의 운동' description='운동 기록을 시작하고 성장을 확인하세요' />
         </div>
-        <DashboardCardList />
+        <TodayDashboard />
       </div>
     </div>
   );
