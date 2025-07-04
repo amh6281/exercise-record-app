@@ -1,7 +1,6 @@
 import { PageHeader } from '@/components/layout';
-import { MyRoutineList, RoutineCard } from '@/components/myRoutines';
+import { MyRoutineList } from '@/components/myRoutines';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '나의 루틴 | GymTrack',
