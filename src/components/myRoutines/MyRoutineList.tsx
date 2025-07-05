@@ -1,6 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import RoutineSummaryCard from './RoutineSummaryCard';
 import SplitRoutineCard from './SplitRoutineCard';
+import { useProfileStore } from '@/store/profileStore';
+import { ProfileModal } from './profile';
 
 // 하드코딩된 3분할 루틴 데이터
 const mockSplitRoutines = [
@@ -51,14 +55,35 @@ const mockSplitRoutines = [
 ];
 
 const MyRoutineList = () => {
+  const profile = useProfileStore((state) => state.profile);
+
   const splitType = '3분할';
   const todayRoutine = '가슴/삼두';
-  const totalRoutines = mockSplitRoutines.length;
+
+  // 프로필이 설정되지 않은 경우
+  if (!profile.nickname) {
+    return (
+      <div className='space-y-8'>
+        <div className='py-12 text-center'>
+          <div className='mb-6'>
+            <div className='bg-cool-100 dark:bg-cool-800 mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full'>
+              <span className='text-3xl'>🏋️‍♂️</span>
+            </div>
+            <h2 className='text-choco-700 dark:text-choco-100 mb-2 text-xl font-bold'>루틴을 만들어보세요!</h2>
+            <p className='text-cool-600 dark:text-cool-200 mb-6'>
+              나만의 운동 루틴을 설정하고 체계적으로 운동해보세요.
+            </p>
+          </div>
+          <ProfileModal />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className='space-y-8'>
       {/* 요약 카드 */}
-      <RoutineSummaryCard splitType={splitType} todayRoutine={todayRoutine} totalRoutines={totalRoutines} />
+      <RoutineSummaryCard splitType={splitType} todayRoutine={todayRoutine} />
 
       {/* 새 루틴 만들기 버튼 */}
       <div className='flex justify-end'>
