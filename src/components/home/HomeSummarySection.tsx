@@ -7,13 +7,13 @@ const HomeSummarySection = () => {
       <div className='space-y-4'>
         <div className='mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2'>
           <Link
-            href='/routines'
+            href='/my-routines'
             className='group from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 dark:from-primary-600 dark:to-primary-700 dark:hover:from-primary-700 dark:hover:to-primary-800 relative transform overflow-hidden rounded-2xl bg-gradient-to-r p-6 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl'
           >
             <div className='absolute inset-0 -translate-x-full -skew-x-12 transform bg-white/10 transition-transform duration-700 group-hover:translate-x-full'></div>
             <div className='relative flex items-center justify-center space-x-3'>
               <span className='text-2xl'>🏋️‍♂️</span>
-              <span className='text-lg'>운동 루틴 보기</span>
+              <span className='text-lg'>내 루틴</span>
             </div>
           </Link>
           <Link
