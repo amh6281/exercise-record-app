@@ -9,8 +9,9 @@ interface ProfileStore {
 
 const defaultProfile: Profile = {
   nickname: '',
-  splitType: 'full-body',
+  splitType: '3-split',
   dayRoutines: [],
+  isCustomMode: false,
 };
 
 export const useProfileStore = create<ProfileStore>()(
