@@ -3,25 +3,55 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { DAY_LABELS } from '@/constants/DayLabel';
 import {
-  ROUTINE_LABELS,
+  ROUTINE_OPTIONS,
   BASIC_SPLIT_OPTIONS,
   DEFAULT_ROUTINES,
   LIMITED_ROUTINE_OPTIONS,
   SPLIT_DESCRIPTIONS,
-} from '@/constants/SplitLabel';
+} from '@/constants/RoutineOptions';
 import type { Profile } from '@/types/Profile';
-import { Switch } from '@/components/ui/switch';
+import { useState, useEffect } from 'react';
+import Toggle from './Toggle';
 
 const ProfileForm = () => {
-  // 임시로 선택된 분할 타입 (UI 테스트용)
-  const selectedSplitType: Profile['splitType'] = '3-split';
-  const defaultRoutines = DEFAULT_ROUTINES[selectedSplitType];
+  // 분할 선택
+  const [selectedSplitType, setSelectedSplitType] = useState<Profile['splitType']>('3-split');
 
-  // 임시로 고급 설정 상태 (UI 테스트용)
-  const isAdvancedMode = false;
+  // 자유 모드
+  const [isCustomMode, setIsCustomMode] = useState(false);
 
-  // 현재 사용할 루틴 옵션
-  const currentRoutineOptions = isAdvancedMode ? ROUTINE_LABELS : LIMITED_ROUTINE_OPTIONS[selectedSplitType];
+  // 요일별 루틴
+  const [weeklyRoutines, setWeeklyRoutines] = useState([...DEFAULT_ROUTINES['3-split']]);
+
+  // 선택할 수 있는 루틴 옵션
+  const routineOptions = isCustomMode ? ROUTINE_OPTIONS : LIMITED_ROUTINE_OPTIONS[selectedSplitType];
+
+  // 분할 선택 시 기본 루틴 업데이트
+  useEffect(() => {
+    setWeeklyRoutines([...DEFAULT_ROUTINES[selectedSplitType]]);
+  }, [selectedSplitType]);
+
+  // 자유 모드 토글 시 선택한 루틴 초기화
+  useEffect(() => {
+    if (isCustomMode) {
+      // 자유 모드 활성화 시 모든 요일을 빈 값으로 초기화
+      const emptyRoutines = Object.keys(DAY_LABELS).map((day) => ({ day, routine: '' }));
+      setWeeklyRoutines(emptyRoutines);
+    } else {
+      // 자유 모드 비활성화 시 현재 분할의 기본 루틴으로 복원
+      setWeeklyRoutines([...DEFAULT_ROUTINES[selectedSplitType]]);
+    }
+  }, [isCustomMode, selectedSplitType]);
+
+  // 분할 변경 핸들러
+  const handleSplitTypeChange = (value: Profile['splitType']) => {
+    setSelectedSplitType(value);
+  };
+
+  // 요일별 루틴 변경 핸들러
+  const handleRoutineChange = (day: string, routine: string) => {
+    setWeeklyRoutines((prev) => prev.map((item) => (item.day === day ? { ...item, routine } : item)));
+  };
 
   return (
     <div className='space-y-6'>
@@ -44,7 +74,7 @@ const ProfileForm = () => {
         <Label htmlFor='splitType' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
           분할 설정
         </Label>
-        <Select defaultValue={selectedSplitType}>
+        <Select value={selectedSplitType} onValueChange={handleSplitTypeChange}>
           <SelectTrigger className='border-cool-200 text-choco-700 focus:border-primary-500 focus:ring-primary-500 dark:border-choco-600 dark:bg-choco-700 dark:text-choco-100 dark:focus:border-primary-400 dark:focus:ring-primary-400 h-11 w-full bg-white focus:ring-1'>
             <SelectValue placeholder='분할 선택' />
           </SelectTrigger>
@@ -69,15 +99,12 @@ const ProfileForm = () => {
         <div>
           <Label className='text-choco-700 dark:text-choco-100 text-sm font-medium'>자유 모드</Label>
           <p className='text-cool-600 dark:text-cool-200 text-xs'>
-            {isAdvancedMode ? '모든 루틴 옵션을 사용할 수 있습니다' : '자유 모드에서 커스텀 루틴을 설정할 수 있습니다'}
+            {isCustomMode ? '모든 루틴 옵션을 사용할 수 있습니다' : '자유 모드에서 커스텀 루틴을 설정할 수 있습니다'}
           </p>
         </div>
         <div className='flex items-center space-x-2'>
-          <Switch
-            id='advanced-mode'
-            className='data-[state=checked]:bg-primary-500 data-[state=unchecked]:bg-cool-200 dark:data-[state=checked]:bg-primary-400 dark:data-[state=unchecked]:bg-choco-600 hover:data-[state=checked]:bg-primary-600 hover:data-[state=unchecked]:bg-cool-300 dark:hover:data-[state=checked]:bg-primary-500 dark:hover:data-[state=unchecked]:bg-choco-500 focus-visible:ring-primary-500/20'
-          />
-          <Label htmlFor='advanced-mode' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
+          <Toggle id='custom-mode' checked={isCustomMode} onCheckedChange={setIsCustomMode} />
+          <Label htmlFor='custom-mode' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
             자유 모드
           </Label>
         </div>
@@ -88,7 +115,7 @@ const ProfileForm = () => {
         <Label className='text-choco-700 dark:text-choco-100 text-sm font-medium'>요일별 루틴</Label>
         <div className='space-y-3'>
           {Object.entries(DAY_LABELS).map(([day, label]) => {
-            const defaultRoutine = defaultRoutines.find((r) => r.day === day)?.routine || '';
+            const currentRoutine = weeklyRoutines.find((r) => r.day === day)?.routine || '';
             return (
               <div key={day} className='flex items-center gap-3'>
                 <Label
@@ -97,13 +124,13 @@ const ProfileForm = () => {
                 >
                   {label}
                 </Label>
-                <Select defaultValue={defaultRoutine}>
+                <Select value={currentRoutine} onValueChange={(value) => handleRoutineChange(day, value)}>
                   <SelectTrigger className='border-cool-200 text-choco-700 focus:border-primary-500 focus:ring-primary-500/20 dark:border-choco-600 dark:bg-choco-700 dark:text-choco-100 dark:focus:border-primary-400 dark:focus:ring-primary-400/20 h-11 flex-1 bg-white focus:ring-1'>
                     <SelectValue placeholder='루틴 선택' />
                   </SelectTrigger>
                   <SelectContent className='border-cool-200 dark:border-choco-600 dark:bg-choco-700 bg-white'>
                     <SelectGroup>
-                      {Object.entries(currentRoutineOptions).map(([key, value]) => (
+                      {Object.entries(routineOptions).map(([key, value]) => (
                         <SelectItem
                           key={key}
                           value={key}

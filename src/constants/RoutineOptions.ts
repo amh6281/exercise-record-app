@@ -1,12 +1,14 @@
-export const SPLIT_LABELS = {
+// 기본 분할 옵션
+export const BASIC_SPLIT_OPTIONS = {
   '3-split': '3분할',
   '4-split': '4분할',
   '5-split': '5분할',
   'full-body': '무분할 (전신)',
 };
 
-export const ROUTINE_LABELS = {
-  rest: '휴무',
+// 자유 모드 루틴 옵션
+export const ROUTINE_OPTIONS = {
+  rest: '휴식',
   chest: '가슴',
   back: '등',
   legs: '하체',
@@ -17,6 +19,7 @@ export const ROUTINE_LABELS = {
   'chest-triceps': '가슴/삼두',
   'back-biceps': '등/이두',
   'chest-shoulders': '가슴/어깨',
+  'legs-shoulders': '하체/어깨',
   'full-body': '전신',
   abs: '복부',
   cardio: '유산소',
@@ -36,11 +39,11 @@ export const DEFAULT_ROUTINES = {
   '3-split': [
     { day: 'monday', routine: 'chest-triceps' },
     { day: 'tuesday', routine: 'back-biceps' },
-    { day: 'wednesday', routine: 'legs' },
+    { day: 'wednesday', routine: 'legs-shoulders' },
     { day: 'thursday', routine: 'rest' },
     { day: 'friday', routine: 'chest-triceps' },
     { day: 'saturday', routine: 'back-biceps' },
-    { day: 'sunday', routine: 'legs' },
+    { day: 'sunday', routine: 'legs-shoulders' },
   ],
   '4-split': [
     { day: 'monday', routine: 'chest-triceps' },
@@ -60,27 +63,27 @@ export const DEFAULT_ROUTINES = {
     { day: 'saturday', routine: 'rest' },
     { day: 'sunday', routine: 'rest' },
   ],
-} as const;
+};
 
 // 분할별 SelectBox 선택 가능 옵션 값
 export const LIMITED_ROUTINE_OPTIONS = {
   'full-body': {
     'full-body': '전신',
     cardio: '유산소',
-    rest: '휴무',
+    rest: '휴식',
   },
   '3-split': {
     'chest-triceps': '가슴/삼두',
     'back-biceps': '등/이두',
-    legs: '하체/어깨',
-    rest: '휴무',
+    'legs-shoulders': '하체/어깨',
+    rest: '휴식',
   },
   '4-split': {
     'chest-triceps': '가슴/삼두',
     'back-biceps': '등/이두',
     shoulders: '어깨',
     legs: '하체',
-    rest: '휴무',
+    rest: '휴식',
   },
   '5-split': {
     chest: '가슴',
@@ -88,9 +91,9 @@ export const LIMITED_ROUTINE_OPTIONS = {
     shoulders: '어깨',
     legs: '하체',
     arms: '팔',
-    rest: '휴무',
+    rest: '휴식',
   },
-} as const;
+};
 
 // 분할별 설명 텍스트
 export const SPLIT_DESCRIPTIONS = {
@@ -98,12 +101,4 @@ export const SPLIT_DESCRIPTIONS = {
   '3-split': '상체, 하체를 3일 주기로 나누어 운동하는 방식입니다.',
   '4-split': '가슴/삼두, 등/이두, 어깨, 하체를 4일 주기로 나누어 운동하는 방식입니다.',
   '5-split': '각 부위를 5일 주기로 세분화하여 운동하는 방식입니다. 중급자 이상에게 추천합니다.',
-} as const;
-
-// 기본 분할 옵션
-export const BASIC_SPLIT_OPTIONS = {
-  '3-split': '3분할',
-  '4-split': '4분할',
-  '5-split': '5분할',
-  'full-body': '무분할 (전신)',
-} as const;
+};
