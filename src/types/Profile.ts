@@ -1,5 +1,5 @@
 interface DayRoutine {
-  day: 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
+  day: string;
   routine: string;
 }
 
