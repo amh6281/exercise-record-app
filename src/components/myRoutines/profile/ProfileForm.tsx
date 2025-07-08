@@ -11,17 +11,29 @@ import {
 } from '@/constants/RoutineOptions';
 import type { Profile } from '@/types/Profile';
 import { useState, useEffect } from 'react';
+import { useProfileStore } from '@/store/profileStore';
 import Toggle from './Toggle';
 
-const ProfileForm = () => {
+interface ProfileFormProps {
+  onSubmit?: (profile: Profile) => void;
+}
+
+const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
+  const profile = useProfileStore((state) => state.profile);
+
+  // 닉네임
+  const [nickname, setNickname] = useState(profile.nickname);
+
   // 분할 선택
-  const [selectedSplitType, setSelectedSplitType] = useState<Profile['splitType']>('3-split');
+  const [selectedSplitType, setSelectedSplitType] = useState<Profile['splitType']>(profile.splitType);
 
   // 자유 모드
-  const [isCustomMode, setIsCustomMode] = useState(false);
+  const [isCustomMode, setIsCustomMode] = useState(profile.isCustomMode);
 
   // 요일별 루틴
-  const [weeklyRoutines, setWeeklyRoutines] = useState([...DEFAULT_ROUTINES['3-split']]);
+  const [weeklyRoutines, setWeeklyRoutines] = useState(
+    profile.dayRoutines.length > 0 ? profile.dayRoutines : [...DEFAULT_ROUTINES['3-split']]
+  );
 
   // 선택할 수 있는 루틴 옵션
   const routineOptions = isCustomMode ? ROUTINE_OPTIONS : LIMITED_ROUTINE_OPTIONS[selectedSplitType];
@@ -53,8 +65,25 @@ const ProfileForm = () => {
     setWeeklyRoutines((prev) => prev.map((item) => (item.day === day ? { ...item, routine } : item)));
   };
 
+  // 폼 제출 핸들러
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const newProfile: Profile = {
+      nickname,
+      splitType: selectedSplitType,
+      dayRoutines: weeklyRoutines,
+      isCustomMode,
+    };
+
+    if (onSubmit) {
+      onSubmit(newProfile);
+    }
+  };
+
   return (
-    <div className='space-y-6'>
+    // Nextjs Form으로 변경
+    <form id='profile-form' onSubmit={handleSubmit} className='space-y-6'>
       {/* 닉네임 입력 */}
       <div className='space-y-2'>
         <Label htmlFor='nickname' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
@@ -63,6 +92,8 @@ const ProfileForm = () => {
         <Input
           id='nickname'
           type='text'
+          value={nickname}
+          onChange={(e) => setNickname(e.target.value)}
           placeholder='운동하는 홍길동'
           className='border-cool-200 text-choco-700 placeholder:text-cool-400 focus:border-primary-500 focus:ring-primary-500/20 dark:border-choco-600 dark:bg-choco-700 dark:text-choco-100 dark:placeholder:text-cool-500 dark:focus:border-primary-400 dark:focus:ring-primary-400/20 h-11 bg-white focus:ring-1'
           required
@@ -157,7 +188,7 @@ const ProfileForm = () => {
           </p>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 
