@@ -13,6 +13,7 @@ import type { Profile } from '@/types/Profile';
 import { useState, useEffect } from 'react';
 import { useProfileStore } from '@/store/profileStore';
 import Toggle from './Toggle';
+import Form from 'next/form';
 
 interface ProfileFormProps {
   onSubmit?: (profile: Profile) => void;
@@ -65,13 +66,11 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
     setWeeklyRoutines((prev) => prev.map((item) => (item.day === day ? { ...item, routine } : item)));
   };
 
-  // 폼 제출 핸들러
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
+  // Server Action
+  const handleFormAction = async (formData: FormData) => {
     const newProfile: Profile = {
-      nickname,
-      splitType: selectedSplitType,
+      nickname: formData.get('nickname') as string,
+      splitType: formData.get('splitType') as Profile['splitType'],
       dayRoutines: weeklyRoutines,
       isCustomMode,
     };
@@ -82,8 +81,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
   };
 
   return (
-    // Nextjs Form으로 변경
-    <form id='profile-form' onSubmit={handleSubmit} className='space-y-6'>
+    <Form action={handleFormAction} className='space-y-6'>
       {/* 닉네임 입력 */}
       <div className='space-y-2'>
         <Label htmlFor='nickname' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
@@ -188,7 +186,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
           </p>
         </div>
       </div>
-    </form>
+    </Form>
   );
 };
 
