@@ -5,6 +5,10 @@ import { BASIC_SPLIT_OPTIONS, ROUTINE_OPTIONS } from '@/constants/RoutineOptions
 const RoutineSummaryCard = () => {
   const profile = useProfileStore((state) => state.profile);
 
+  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
+  const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
+  const todayRoutineName = ROUTINE_OPTIONS[todayRoutine?.routine as keyof typeof ROUTINE_OPTIONS];
+
   return (
     <div className='bg-primary-500 dark:bg-primary-500/80 rounded-lg p-6'>
       <div className='mb-4 flex items-center justify-between'>
@@ -24,9 +28,7 @@ const RoutineSummaryCard = () => {
           <p className='mb-1 text-sm text-white/85'>
             오늘 ({new Date().toLocaleDateString('ko-KR', { weekday: 'short' })})
           </p>
-          <p className='text-lg font-bold text-white'>
-            {ROUTINE_OPTIONS[profile.dayRoutines[0].routine as keyof typeof ROUTINE_OPTIONS]}
-          </p>
+          <p className='text-lg font-bold text-white'>{todayRoutineName}</p>
         </div>
 
         {/* <div className='text-sm text-white/70'>
