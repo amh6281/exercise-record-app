@@ -5,6 +5,7 @@ import RoutineSummaryCard from './RoutineSummaryCard';
 import SplitRoutineCard from './SplitRoutineCard';
 import { useProfileStore } from '@/store/profileStore';
 import { ProfileModal } from './profile';
+import { RoutineModal } from './routine';
 
 // 하드코딩된 3분할 루틴 데이터
 const mockSplitRoutines = [
@@ -82,15 +83,8 @@ const MyRoutineList = () => {
       {/* 요약 카드 */}
       <RoutineSummaryCard />
 
-      {/* 새 루틴 만들기 버튼 */}
-      <div className='flex justify-end'>
-        <Link
-          href='/routines/new'
-          className='bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 rounded-lg px-6 py-3 font-medium text-white transition-colors'
-        >
-          새 루틴 만들기
-        </Link>
-      </div>
+      {/* 새 루틴 만들기 모달 */}
+      <RoutineModal />
 
       {/* 분할별 루틴 카드들 */}
       <div className='grid gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
