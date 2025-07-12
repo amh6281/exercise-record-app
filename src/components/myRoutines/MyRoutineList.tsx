@@ -55,13 +55,10 @@ const mockSplitRoutines = [
 ];
 
 const MyRoutineList = () => {
-  const profile = useProfileStore((state) => state.profile);
-
-  const splitType = '3분할';
-  const todayRoutine = '가슴/삼두';
+  const nickname = useProfileStore((state) => state.profile);
 
   // 프로필이 설정되지 않은 경우
-  if (!profile.nickname) {
+  if (!nickname) {
     return (
       <div className='space-y-8'>
         <div className='py-12 text-center'>
@@ -83,7 +80,7 @@ const MyRoutineList = () => {
   return (
     <div className='space-y-8'>
       {/* 요약 카드 */}
-      <RoutineSummaryCard splitType={splitType} todayRoutine={todayRoutine} />
+      <RoutineSummaryCard />
 
       {/* 새 루틴 만들기 버튼 */}
       <div className='flex justify-end'>
