@@ -1,3 +1,4 @@
+import { Exercise } from '@/store/routineStore';
 import {
   DotsThreeOutlineIcon,
   PlayIcon,
@@ -8,29 +9,21 @@ import {
   CalendarBlankIcon,
 } from '@phosphor-icons/react/dist/ssr';
 
-interface Exercise {
-  id: string;
-  name: string;
-  sets: number;
-  reps: string;
-  weight?: string;
-}
-
 interface SplitRoutineCardProps {
   id: string;
   title: string;
-  scheduledDay: string;
   exercises: Exercise[];
-  estimatedDuration: number;
+  // scheduledDay: string;
+  // estimatedDuration: number;
   isToday?: boolean;
 }
 
 const SplitRoutineCard = ({
   id,
   title,
-  scheduledDay,
   exercises,
-  estimatedDuration,
+  // scheduledDay,
+  // estimatedDuration,
   isToday = false,
 }: SplitRoutineCardProps) => {
   return (
@@ -40,7 +33,7 @@ const SplitRoutineCard = ({
       <div className='mb-4 flex items-center justify-between'>
         <div className='flex items-center gap-3'>
           <h3 className='text-choco-700 dark:text-choco-100 text-lg font-semibold'>{title}</h3>
-          {isToday && <span className='bg-primary-500 rounded-full px-2 py-1 text-xs text-white'>오늘</span>}
+          {/* {isToday && <span className='bg-primary-500 rounded-full px-2 py-1 text-xs text-white'>오늘</span>} */}
         </div>
 
         <div className='group relative'>
@@ -73,11 +66,11 @@ const SplitRoutineCard = ({
       <div className='text-cool-600 dark:text-cool-200 mb-4 flex items-center gap-4 text-sm'>
         <div className='flex items-center gap-1'>
           <CalendarBlankIcon size={14} className='text-primary-500 dark:text-primary-400' />
-          <span>{scheduledDay}요일</span>
+          {/* <span>{scheduledDay}요일</span> */}
         </div>
         <div className='flex items-center gap-1'>
           <ClockCountdownIcon size={14} className='text-primary-500 dark:text-primary-400' />
-          <span>{estimatedDuration}분 소요</span>
+          {/* <span>{estimatedDuration}분 소요</span> */}
         </div>
       </div>
 

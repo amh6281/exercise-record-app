@@ -6,6 +6,7 @@ import SplitRoutineCard from './SplitRoutineCard';
 import { useProfileStore } from '@/store/profileStore';
 import { ProfileModal } from './profile';
 import { RoutineModal } from './routine';
+import { useRoutineStore } from '@/store/routineStore';
 
 // 하드코딩된 3분할 루틴 데이터
 const mockSplitRoutines = [
@@ -56,7 +57,8 @@ const mockSplitRoutines = [
 ];
 
 const MyRoutineList = () => {
-  const nickname = useProfileStore((state) => state.profile);
+  const nickname = useProfileStore((state) => state.profile.nickname);
+  const routines = useRoutineStore((state) => state.routines);
 
   // 프로필이 설정되지 않은 경우
   if (!nickname) {
@@ -88,15 +90,15 @@ const MyRoutineList = () => {
 
       {/* 분할별 루틴 카드들 */}
       <div className='grid gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
-        {mockSplitRoutines.map((routine) => (
+        {routines.map((routine) => (
           <SplitRoutineCard
             key={routine.id}
             id={routine.id}
             title={routine.title}
-            scheduledDay={routine.scheduledDay}
+            // scheduledDay={routine.scheduledDay}
             exercises={routine.exercises}
-            estimatedDuration={routine.estimatedDuration}
-            isToday={routine.isToday}
+            // estimatedDuration={routine.estimatedDuration}
+            // isToday={routine.isToday}
           />
         ))}
       </div>

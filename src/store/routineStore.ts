@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-interface Exercise {
+export interface Exercise {
   id: string;
   name: string;
   sets: string;
