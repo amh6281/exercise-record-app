@@ -1,19 +1,6 @@
+import { Routine } from '@/types/Routine';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-
-export interface Exercise {
-  id: string;
-  name: string;
-  sets: string;
-  reps: string;
-  weight: string;
-}
-
-interface Routine {
-  id: string;
-  title: string;
-  exercises: Exercise[];
-}
 
 interface RoutineStore {
   routines: Routine[];

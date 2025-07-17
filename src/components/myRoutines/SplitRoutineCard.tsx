@@ -1,4 +1,4 @@
-import { Exercise } from '@/store/routineStore';
+import { Exercise } from '@/types/Routine';
 import {
   DotsThreeOutlineIcon,
   PlayIcon,
