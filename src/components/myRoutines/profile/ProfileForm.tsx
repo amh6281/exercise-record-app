@@ -82,7 +82,6 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
   };
 
   return (
-    // Nextjs Form으로 변경
     <form id='profile-form' onSubmit={handleSubmit} className='space-y-6'>
       {/* 닉네임 입력 */}
       <div className='space-y-2'>

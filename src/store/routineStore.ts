@@ -10,12 +10,10 @@ interface RoutineStore {
   setRoutines: (routines: Routine[]) => void;
 }
 
-const defaultRoutines: Routine[] = [];
-
 export const useRoutineStore = create<RoutineStore>()(
   persist(
     (set) => ({
-      routines: defaultRoutines,
+      routines: [],
       addRoutine: (routine: Routine) => set((state) => ({ routines: [...state.routines, routine] })),
       updateRoutine: (id: string, routine: Partial<Routine>) =>
         set((state) => ({ routines: state.routines.map((r) => (r.id === id ? { ...r, ...routine } : r)) })),
