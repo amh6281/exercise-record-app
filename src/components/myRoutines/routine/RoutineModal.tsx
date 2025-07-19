@@ -10,11 +10,24 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import RoutineForm from './RoutineForm';
+import { useState } from 'react';
+import { Routine } from '@/types/Routine';
+import { useRoutineStore } from '@/store/routineStore';
 
 const RoutineModal = () => {
+  const addRoutine = useRoutineStore((state) => state.addRoutine);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSubmit = (routine: Routine) => {
+    // RoutineStore 업데이트
+    addRoutine(routine);
+
+    setIsOpen(false);
+  };
+
   return (
     <div className='flex justify-end'>
-      <Dialog>
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button className='bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 h-12 rounded-lg px-6 py-3 font-medium text-white transition-colors'>
             새 루틴 만들기
@@ -35,7 +48,7 @@ const RoutineModal = () => {
           </DialogHeader>
 
           {/* 루틴 폼 */}
-          <RoutineForm />
+          <RoutineForm onSubmit={handleSubmit} />
 
           <DialogFooter>
             <DialogClose asChild>
@@ -48,7 +61,7 @@ const RoutineModal = () => {
             </DialogClose>
             <Button
               type='submit'
-              form='profile-form'
+              form='routine-form'
               className='bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 text-white'
             >
               저장
