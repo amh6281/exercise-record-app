@@ -6,8 +6,8 @@ import { useState } from 'react';
 
 const RoutineSummaryCard = () => {
   const profile = useProfileStore((state) => state.profile);
-  // const resetProfile = useProfileStore((state) => state.resetProfile); // 예시 액션
   const [showConfirm, setShowConfirm] = useState(false);
+  const resetProfile = useProfileStore((state) => state.resetProfile);
 
   const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
   const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
@@ -57,8 +57,8 @@ const RoutineSummaryCard = () => {
                 size='sm'
                 className='bg-primary-600 hover:bg-primary-700 text-white'
                 onClick={() => {
-                  // resetProfile();
                   setShowConfirm(false);
+                  resetProfile();
                 }}
               >
                 삭제하기

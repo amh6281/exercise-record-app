@@ -5,6 +5,7 @@ import { Profile } from '@/types/Profile';
 interface ProfileStore {
   profile: Profile;
   setProfile: (profile: Partial<Profile>) => void;
+  resetProfile: () => void;
 }
 
 const defaultProfile: Profile = {
@@ -18,11 +19,11 @@ export const useProfileStore = create<ProfileStore>()(
   persist(
     (set) => ({
       profile: defaultProfile,
-
       setProfile: (profile: Partial<Profile>) =>
         set((state) => ({
           profile: { ...state.profile, ...profile },
         })),
+      resetProfile: () => set({ profile: defaultProfile }),
     }),
     {
       name: 'profile-storage',
