@@ -30,4 +30,6 @@ export interface Routine {
   id: string;
   title: string;
   exercises: Exercise[];
+  // day: string;
+  // isToday: boolean;
 }
