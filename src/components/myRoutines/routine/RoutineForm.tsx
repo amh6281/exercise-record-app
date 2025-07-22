@@ -5,6 +5,8 @@ import { Label } from '@/components/ui/label';
 import { PlusIcon, TrashIcon } from '@phosphor-icons/react';
 import { Exercise, Routine } from '@/types/Routine';
 import { useState } from 'react';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ROUTINE_OPTIONS } from '@/constants/RoutineOptions';
 
 interface RoutineFormProps {
   onSubmit?: (routine: Routine) => void;
@@ -12,6 +14,10 @@ interface RoutineFormProps {
 
 const RoutineForm = ({ onSubmit }: RoutineFormProps) => {
   const profile = useProfileStore((state) => state.profile);
+  const uniqueRoutineTypes = Array.from(new Set(profile.dayRoutines.map((item) => item.routine).filter(Boolean)));
+
+  // 루틴 타입
+  const [routineType, setRoutineType] = useState('');
 
   // 루틴 제목
   const [title, setTitle] = useState('');
@@ -42,6 +48,7 @@ const RoutineForm = ({ onSubmit }: RoutineFormProps) => {
       id: crypto.randomUUID(),
       title,
       exercises,
+      routineType,
     };
 
     if (onSubmit) {
@@ -51,6 +58,31 @@ const RoutineForm = ({ onSubmit }: RoutineFormProps) => {
 
   return (
     <form id='routine-form' onSubmit={handleSubmit} className='space-y-6'>
+      {uniqueRoutineTypes.length > 0 && (
+        <div className='space-y-2'>
+          <Label htmlFor='routineType' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
+            루틴 종류 선택
+          </Label>
+          <Select value={routineType} onValueChange={setRoutineType}>
+            <SelectTrigger className='border-cool-200 text-choco-700 focus:border-primary-500 focus:ring-primary-500/20 dark:border-choco-600 dark:bg-choco-700 dark:text-choco-100 dark:focus:border-primary-400 dark:focus:ring-primary-400/20 h-11 w-full bg-white focus:ring-1'>
+              <SelectValue placeholder='루틴 종류를 선택하세요' />
+            </SelectTrigger>
+            <SelectContent className='border-cool-200 dark:border-choco-600 dark:bg-choco-700 bg-white'>
+              <SelectGroup>
+                {uniqueRoutineTypes.map((routine) => (
+                  <SelectItem
+                    key={routine}
+                    value={routine}
+                    className='text-choco-700 focus:bg-primary-50 focus:text-primary-700 dark:text-choco-100 dark:focus:bg-primary-900 dark:focus:text-primary-300'
+                  >
+                    {ROUTINE_OPTIONS[routine as keyof typeof ROUTINE_OPTIONS]}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+      )}
       {/* 루틴 제목 */}
       <div className='space-y-2'>
         <Label htmlFor='routineTitle' className='text-choco-700 dark:text-choco-100 text-sm font-medium'>
