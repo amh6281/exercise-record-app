@@ -1,5 +1,6 @@
+import { useProfileStore } from '@/store/profileStore';
 import { useRoutineStore } from '@/store/routineStore';
-import { Exercise } from '@/types/Routine';
+import { Routine } from '@/types/Routine';
 import {
   DotsThreeOutlineIcon,
   PlayIcon,
@@ -11,23 +12,23 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 
 interface SplitRoutineCardProps {
-  id: string;
-  title: string;
-  exercises: Exercise[];
-  // scheduledDay: string;
-  // estimatedDuration: number;
-  isToday?: boolean;
+  routine: Routine;
 }
 
-const SplitRoutineCard = ({
-  id,
-  title,
-  exercises,
-  // scheduledDay,
-  // estimatedDuration,
-  isToday = false,
-}: SplitRoutineCardProps) => {
+const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
+  const { id, title, exercises, routineType } = routine;
+
+  const profile = useProfileStore((state) => state.profile);
   const removeRoutine = useRoutineStore((state) => state.removeRoutine);
+
+  // 오늘 요일
+  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
+
+  // 오늘 요일에 해당하는 루틴 정보
+  const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
+
+  // 오늘의 루틴 여부
+  const isToday = todayRoutine?.routine === routineType;
 
   return (
     <div

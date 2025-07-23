@@ -42,15 +42,7 @@ const MyRoutineList = () => {
       {/* 분할별 루틴 카드들 */}
       <div className='grid gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
         {routines.map((routine) => (
-          <SplitRoutineCard
-            key={routine.id}
-            id={routine.id}
-            title={routine.title}
-            // scheduledDay={routine.scheduledDay}
-            exercises={routine.exercises}
-            // estimatedDuration={routine.estimatedDuration}
-            // isToday={routine.isToday}
-          />
+          <SplitRoutineCard key={routine.id} routine={routine} />
         ))}
       </div>
 
