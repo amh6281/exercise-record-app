@@ -1,24 +1,13 @@
+'use client';
+
+import { BASIC_SPLIT_OPTIONS, ROUTINE_OPTIONS } from '@/constants/RoutineOptions';
+import { useProfileStore } from '@/store/profileStore';
+
 const TodayDashboard = () => {
-  const today = new Date();
-  const dayOfWeek = today.getDay();
-  const dayNames = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
-  const todayName = dayNames[dayOfWeek];
-  const userSplit = '3분할';
-
-  const getWorkoutParts = (split: string, day: number) => {
-    switch (split) {
-      case '3분할':
-        return ['가슴/삼두', '등/이두', '하체/어깨'][day % 3];
-      case '5분할':
-        return ['가슴', '등', '어깨', '팔', '하체'][day % 5];
-      case '4분할':
-        return ['가슴/삼두', '등/이두', '어깨', '하체'][day % 4];
-      default:
-        return '휴식일';
-    }
-  };
-
-  const todayWorkout = getWorkoutParts(userSplit, dayOfWeek);
+  const profile = useProfileStore((state) => state.profile);
+  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
+  const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
+  const todayRoutineName = ROUTINE_OPTIONS[todayRoutine?.routine as keyof typeof ROUTINE_OPTIONS];
 
   return (
     <div>
@@ -26,14 +15,10 @@ const TodayDashboard = () => {
       <div className='bg-primary-500 mb-8 rounded-2xl p-8 text-center text-white'>
         <div className='mb-6'>
           <div className='mb-4 inline-block rounded-full bg-white/20 px-6 py-2 text-sm font-bold'>
-            {todayName} • {today.toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' })}
+            {todayRoutineName}
           </div>
-          <h2 className='mb-2 text-5xl font-black tracking-tight'>{todayWorkout}</h2>
+          <h2 className='mb-2 text-5xl font-black tracking-tight'>{todayRoutineName}</h2>
           <p className='text-primary-100 text-xl font-medium'>오늘의 타겟 부위</p>
-        </div>
-
-        <div className='mb-6 flex items-center justify-center'>
-          <span className='text-primary-100 font-bold'>HIGH INTENSITY</span>
         </div>
 
         <button className='text-primary-700 hover:bg-primary-50 rounded-xl bg-white px-12 py-4 text-lg font-black transition-colors'>
@@ -51,7 +36,7 @@ const TodayDashboard = () => {
               <span className='text-sm font-bold'>💪</span>
             </div>
           </div>
-          <p className='text-2xl font-black'>{userSplit}</p>
+          <p className='text-2xl font-black'>{BASIC_SPLIT_OPTIONS[profile.splitType]}</p>
           <p className='text-info-100 mt-2 text-sm'>현재 설정된 분할</p>
         </div>
 
@@ -63,7 +48,7 @@ const TodayDashboard = () => {
               <span className='text-sm font-bold'>📅</span>
             </div>
           </div>
-          <p className='text-2xl font-black'>{todayName}</p>
+          <p className='text-2xl font-black'>{new Date().toLocaleDateString('ko-KR', { weekday: 'long' })}</p>
           <p className='text-success-100 mt-2 text-sm'>오늘의 운동 요일</p>
         </div>
 
@@ -75,7 +60,7 @@ const TodayDashboard = () => {
               <span className='text-sm font-bold'>🎯</span>
             </div>
           </div>
-          <p className='text-2xl font-black'>{todayWorkout}</p>
+          <p className='text-2xl font-black'>{todayRoutineName}</p>
           <p className='text-caution-100 mt-2 text-sm'>오늘의 운동 부위</p>
         </div>
       </div>
@@ -85,7 +70,7 @@ const TodayDashboard = () => {
         <h3 className='text-choco-700 dark:text-choco-100 mb-4 text-center text-xl font-bold'>💡 운동 팁</h3>
         <div className='text-cool-600 dark:text-cool-200 text-center'>
           <p className='mb-2'>
-            오늘은 <span className='text-primary-600 dark:text-primary-400 font-bold'>{todayWorkout}</span> 운동을
+            오늘은 <span className='text-primary-600 dark:text-primary-400 font-bold'>{todayRoutineName}</span> 운동을
             집중적으로!
           </p>
           <p className='text-sm'>적절한 워밍업과 스트레칭을 잊지 마세요.</p>

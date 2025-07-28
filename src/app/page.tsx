@@ -16,10 +16,10 @@ const HomePage = () => {
           <PageHeader title='오늘의 운동' description='운동 기록을 시작하고 성장을 확인하세요' />
         </div>
         {/* 오늘의 운동 대시보드 */}
-        {/* <TodayDashboard /> */}
+        <TodayDashboard />
 
         {/* release 1.0.0 */}
-        <HomeSummarySection />
+        {/* <HomeSummarySection /> */}
       </div>
     </div>
   );
