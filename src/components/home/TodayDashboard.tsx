@@ -2,8 +2,10 @@
 
 import { BASIC_SPLIT_OPTIONS, ROUTINE_OPTIONS } from '@/constants/RoutineOptions';
 import { useProfileStore } from '@/store/profileStore';
+import { useRouter } from 'next/navigation';
 
 const TodayDashboard = () => {
+  const router = useRouter();
   const profile = useProfileStore((state) => state.profile);
   const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
   const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
@@ -21,7 +23,12 @@ const TodayDashboard = () => {
           <p className='text-primary-100 text-xl font-medium'>오늘의 타겟 부위</p>
         </div>
 
-        <button className='text-primary-700 hover:bg-primary-50 rounded-xl bg-white px-12 py-4 text-lg font-black transition-colors'>
+        <button
+          className='text-primary-700 hover:bg-primary-50 cursor-pointer rounded-xl bg-white px-12 py-4 text-lg font-black transition-colors'
+          onClick={() => {
+            router.push('/my-routines');
+          }}
+        >
           🏋️ 운동 시작하기
         </button>
       </div>
