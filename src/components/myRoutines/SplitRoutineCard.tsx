@@ -20,6 +20,7 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
 
   const profile = useProfileStore((state) => state.profile);
   const removeRoutine = useRoutineStore((state) => state.removeRoutine);
+  const duplicateRoutine = useRoutineStore((state) => state.duplicateRoutine);
 
   // 오늘 요일
   const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
@@ -55,7 +56,10 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
               <PencilIcon size={14} />
               수정
             </button>
-            <button className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors'>
+            <button
+              onClick={() => duplicateRoutine(id)}
+              className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm transition-colors'
+            >
               <CopyIcon size={14} />
               복제
             </button>
