@@ -8,7 +8,6 @@ interface RoutineStore {
   updateRoutine: (id: string, routine: Partial<Routine>) => void;
   removeRoutine: (id: string) => void;
   duplicateRoutine: (id: string) => void;
-  setRoutines: (routines: Routine[]) => void;
 }
 
 export const useRoutineStore = create<RoutineStore>()(
@@ -36,8 +35,6 @@ export const useRoutineStore = create<RoutineStore>()(
 
           return { routines: [...state.routines, duplicatedRoutine] };
         }),
-
-      setRoutines: (routines: Routine[]) => set({ routines }),
     }),
     {
       name: 'routines-storage',
