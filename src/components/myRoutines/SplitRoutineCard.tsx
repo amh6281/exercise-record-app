@@ -1,13 +1,12 @@
 import { useProfileStore } from '@/store/profileStore';
 import { useRoutineStore } from '@/store/routineStore';
 import { Routine } from '@/types/Routine';
+import { DAY_LABELS } from '@/constants/DayLabel';
 import {
   DotsThreeOutlineIcon,
-  PlayIcon,
   PencilIcon,
   CopyIcon,
   TrashIcon,
-  ClockCountdownIcon,
   CalendarBlankIcon,
 } from '@phosphor-icons/react/dist/ssr';
 
@@ -31,6 +30,9 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
   // 오늘의 루틴 여부
   const isToday = todayRoutine?.routine === routineType;
 
+  // 루틴 요일
+  const scheduledDay = profile.dayRoutines.find((day) => day.routine === routineType)?.day;
+
   return (
     <div
       className={`border-cool-200 hover:border-primary-500 dark:border-choco-600 dark:bg-choco-800 dark:hover:border-primary-400 rounded-lg border bg-white p-6 transition-colors duration-200 ${isToday ? 'ring-primary-500 ring-2' : ''}`}
@@ -38,7 +40,7 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
       <div className='mb-4 flex items-center justify-between'>
         <div className='flex items-center gap-3'>
           <h3 className='text-choco-700 dark:text-choco-100 text-lg font-semibold'>{title}</h3>
-          {/* {isToday && <span className='bg-primary-500 rounded-full px-2 py-1 text-xs text-white'>오늘</span>} */}
+          {isToday && <span className='bg-primary-500 rounded-full px-2 py-1 text-xs text-white'>오늘</span>}
         </div>
 
         <div className='group relative'>
@@ -49,10 +51,6 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
           {/* 드롭다운 메뉴 */}
           <div className='dark:bg-choco-700 border-cool-200 dark:border-choco-600 invisible absolute top-6 right-0 z-10 min-w-[120px] rounded-lg border bg-white opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100'>
             <button className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors'>
-              <PlayIcon size={14} />
-              시작하기
-            </button>
-            <button className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors'>
               <PencilIcon size={14} />
               수정
             </button>
@@ -61,7 +59,7 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
               className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm transition-colors'
             >
               <CopyIcon size={14} />
-              복제
+              복사
             </button>
             <button
               onClick={() => removeRoutine(id)}
@@ -77,11 +75,7 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
       <div className='text-cool-600 dark:text-cool-200 mb-4 flex items-center gap-4 text-sm'>
         <div className='flex items-center gap-1'>
           <CalendarBlankIcon size={14} className='text-primary-500 dark:text-primary-400' />
-          {/* <span>{scheduledDay}요일</span> */}
-        </div>
-        <div className='flex items-center gap-1'>
-          <ClockCountdownIcon size={14} className='text-primary-500 dark:text-primary-400' />
-          {/* <span>{estimatedDuration}분 소요</span> */}
+          <span>{DAY_LABELS[scheduledDay as keyof typeof DAY_LABELS]}</span>
         </div>
       </div>
 
