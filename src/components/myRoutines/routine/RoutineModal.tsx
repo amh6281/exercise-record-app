@@ -14,7 +14,11 @@ import { useState } from 'react';
 import { Routine } from '@/types/Routine';
 import { useRoutineStore } from '@/store/routineStore';
 
-const RoutineModal = () => {
+interface RoutineModalProps {
+  trigger: React.ReactNode;
+}
+
+const RoutineModal = ({ trigger }: RoutineModalProps) => {
   const addRoutine = useRoutineStore((state) => state.addRoutine);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,11 +32,7 @@ const RoutineModal = () => {
   return (
     <div className='flex justify-end'>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger asChild>
-          <Button className='bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 h-12 rounded-lg px-6 py-3 font-medium text-white transition-colors'>
-            새 루틴 만들기
-          </Button>
-        </DialogTrigger>
+        <DialogTrigger asChild>{trigger}</DialogTrigger>
         <DialogContent
           className='border-choco-200 dark:border-choco-600 dark:bg-choco-800 flex max-h-[90vh] flex-col overflow-y-auto bg-white sm:max-w-[600px]'
           style={{
