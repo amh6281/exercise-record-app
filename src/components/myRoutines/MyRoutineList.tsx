@@ -6,6 +6,7 @@ import { useProfileStore } from '@/store/profileStore';
 import { ProfileModal } from './profile';
 import { RoutineModal } from './routine';
 import { useRoutineStore } from '@/store/routineStore';
+import { Button } from '../ui/button';
 
 const MyRoutineList = () => {
   const nickname = useProfileStore((state) => state.profile.nickname);
@@ -37,7 +38,13 @@ const MyRoutineList = () => {
       <RoutineSummaryCard />
 
       {/* 새 루틴 만들기 모달 */}
-      <RoutineModal />
+      <RoutineModal
+        trigger={
+          <Button className='bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 h-12 rounded-lg px-6 py-3 font-medium text-white transition-colors'>
+            새 루틴 만들기
+          </Button>
+        }
+      />
 
       {/* 분할별 루틴 카드들 */}
       <div className='grid gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>

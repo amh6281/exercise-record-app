@@ -9,6 +9,7 @@ import {
   TrashIcon,
   CalendarBlankIcon,
 } from '@phosphor-icons/react/dist/ssr';
+import { RoutineModal } from './routine';
 
 interface SplitRoutineCardProps {
   routine: Routine;
@@ -50,10 +51,14 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
 
           {/* 드롭다운 메뉴 */}
           <div className='dark:bg-choco-700 border-cool-200 dark:border-choco-600 invisible absolute top-6 right-0 z-10 min-w-[120px] rounded-lg border bg-white opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100'>
-            <button className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm transition-colors'>
-              <PencilIcon size={14} />
-              수정
-            </button>
+            <RoutineModal
+              trigger={
+                <button className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm transition-colors'>
+                  <PencilIcon size={14} />
+                  수정
+                </button>
+              }
+            />
             <button
               onClick={() => duplicateRoutine(id)}
               className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm transition-colors'
