@@ -1,17 +1,16 @@
 import { useProfileStore } from '@/store/profileStore';
 import { CalendarIcon, TargetIcon, TrashIcon } from '@phosphor-icons/react/dist/ssr';
-import { BASIC_SPLIT_OPTIONS, ROUTINE_OPTIONS } from '@/constants/RoutineOptions';
+import { BASIC_SPLIT_OPTIONS } from '@/constants/RoutineOptions';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import { getTodayRoutineInfo } from '@/lib/routine';
 
 const RoutineSummaryCard = () => {
   const profile = useProfileStore((state) => state.profile);
   const [showConfirm, setShowConfirm] = useState(false);
   const resetProfile = useProfileStore((state) => state.resetProfile);
 
-  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
-  const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
-  const todayRoutineName = ROUTINE_OPTIONS[todayRoutine?.routine as keyof typeof ROUTINE_OPTIONS];
+  const { todayRoutineName } = getTodayRoutineInfo(profile);
 
   return (
     <div className='bg-primary-500 dark:bg-primary-500/80 rounded-lg p-6'>

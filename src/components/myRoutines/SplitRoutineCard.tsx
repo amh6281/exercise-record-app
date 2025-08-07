@@ -10,6 +10,7 @@ import {
   CalendarBlankIcon,
 } from '@phosphor-icons/react/dist/ssr';
 import { RoutineModal } from './routine';
+import { getTodayRoutine } from '@/lib/routine';
 
 interface SplitRoutineCardProps {
   routine: Routine;
@@ -22,11 +23,8 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
   const removeRoutine = useRoutineStore((state) => state.removeRoutine);
   const duplicateRoutine = useRoutineStore((state) => state.duplicateRoutine);
 
-  // 오늘 요일
-  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
-
   // 오늘 요일에 해당하는 루틴 정보
-  const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
+  const todayRoutine = getTodayRoutine(profile);
 
   // 오늘의 루틴 여부
   const isToday = todayRoutine?.routine === routineType;

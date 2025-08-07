@@ -1,15 +1,14 @@
 'use client';
 
-import { BASIC_SPLIT_OPTIONS, ROUTINE_OPTIONS } from '@/constants/RoutineOptions';
+import { BASIC_SPLIT_OPTIONS } from '@/constants/RoutineOptions';
 import { useProfileStore } from '@/store/profileStore';
 import { useRouter } from 'next/navigation';
+import { getTodayRoutineInfo } from '@/lib/routine';
 
 const TodayDashboard = () => {
   const router = useRouter();
   const profile = useProfileStore((state) => state.profile);
-  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
-  const todayRoutine = profile.dayRoutines.find((day) => day.day === today);
-  const todayRoutineName = ROUTINE_OPTIONS[todayRoutine?.routine as keyof typeof ROUTINE_OPTIONS];
+  const { todayRoutineName } = getTodayRoutineInfo(profile);
 
   return (
     <div>
