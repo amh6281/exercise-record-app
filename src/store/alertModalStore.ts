@@ -7,9 +7,8 @@ export interface AlertModalState {
 }
 
 interface AlertModalActions {
-  showAlert: (params: { desc: string; onConfirm?: () => void }) => void;
-  hideAlert: () => void;
-  confirm: () => void;
+  openModal: (params: { desc: string; onConfirm?: () => void }) => void;
+  closeModal: () => void;
 }
 
 const initialState: AlertModalState = {
@@ -18,10 +17,10 @@ const initialState: AlertModalState = {
   onConfirm: undefined,
 };
 
-export const useAlertModalStore = create<AlertModalState & AlertModalActions>((set, get) => ({
+export const useAlertModalStore = create<AlertModalState & AlertModalActions>((set) => ({
   ...initialState,
 
-  showAlert: (params) => {
+  openModal: (params) => {
     set({
       isOpen: true,
       desc: params.desc,
@@ -29,15 +28,7 @@ export const useAlertModalStore = create<AlertModalState & AlertModalActions>((s
     });
   },
 
-  hideAlert: () => {
+  closeModal: () => {
     set(initialState);
-  },
-
-  confirm: () => {
-    const { onConfirm } = get();
-    if (onConfirm) {
-      onConfirm();
-    }
-    get().hideAlert();
   },
 }));

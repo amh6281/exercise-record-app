@@ -8,10 +8,8 @@ import { useAlertModalStore } from '@/store/alertModalStore';
 
 const RoutineSummaryCard = () => {
   const profile = useProfileStore((state) => state.profile);
-  const [showConfirm, setShowConfirm] = useState(false);
   const resetProfile = useProfileStore((state) => state.resetProfile);
-
-  const { showAlert } = useAlertModalStore();
+  const openModal = useAlertModalStore((state) => state.openModal);
 
   const { todayRoutineName } = getTodayRoutineInfo(profile);
 
@@ -40,7 +38,7 @@ const RoutineSummaryCard = () => {
         <div className='mt-4 flex justify-end'>
           <button
             onClick={() => {
-              showAlert({
+              openModal({
                 desc: '프로필을 삭제하면 모든 데이터가 삭제됩니다. 정말로 삭제하시겠습니까?',
                 onConfirm: () => resetProfile(),
               });
