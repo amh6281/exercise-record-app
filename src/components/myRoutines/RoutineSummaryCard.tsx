@@ -4,11 +4,14 @@ import { BASIC_SPLIT_OPTIONS } from '@/constants/RoutineOptions';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { getTodayRoutineInfo } from '@/lib/routine';
+import { useAlertModalStore } from '@/store/alertModalStore';
 
 const RoutineSummaryCard = () => {
   const profile = useProfileStore((state) => state.profile);
   const [showConfirm, setShowConfirm] = useState(false);
   const resetProfile = useProfileStore((state) => state.resetProfile);
+
+  const { showAlert } = useAlertModalStore();
 
   const { todayRoutineName } = getTodayRoutineInfo(profile);
 
@@ -34,47 +37,20 @@ const RoutineSummaryCard = () => {
           <p className='text-lg font-bold text-white'>{todayRoutineName}</p>
         </div>
 
-        {showConfirm ? (
-          <div className='border-primary-200 bg-primary-50 dark:border-primary-700 dark:bg-primary-900 mt-3 flex flex-col gap-2 rounded-lg border p-4 text-sm shadow-lg'>
-            <div className='mb-1 flex items-center gap-2'>
-              <TrashIcon size={18} className='text-primary-600 dark:text-primary-300' />
-              <span className='text-primary-900 dark:text-primary-100 font-semibold'>
-                정말로 프로필을 삭제하시겠어요?
-              </span>
-            </div>
-            <p className='text-primary-700 dark:text-primary-300 mb-2'>이 작업은 되돌릴 수 없습니다.</p>
-            <div className='flex justify-end gap-2'>
-              <Button
-                size='sm'
-                variant='ghost'
-                className='text-primary-600 border-primary-200 hover:bg-primary-50 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 border bg-white'
-                onClick={() => setShowConfirm(false)}
-              >
-                취소
-              </Button>
-              <Button
-                size='sm'
-                className='bg-primary-600 hover:bg-primary-700 text-white'
-                onClick={() => {
-                  setShowConfirm(false);
-                  resetProfile();
-                }}
-              >
-                삭제하기
-              </Button>
-            </div>
-          </div>
-        ) : (
-          <div className='mt-4 flex justify-end'>
-            <button
-              onClick={() => setShowConfirm(true)}
-              className='bg-primary-50 text-primary-700 hover:bg-primary-100 focus:ring-primary-300 dark:bg-primary-900 dark:text-primary-100 dark:hover:bg-primary-800 flex items-center gap-1 rounded-md px-3 py-1 text-xs shadow transition-colors duration-150 focus:ring-2 focus:outline-none'
-            >
-              <TrashIcon size={16} className='text-primary-400 dark:text-primary-300' />
-              <span className='font-semibold'>프로필 삭제</span>
-            </button>
-          </div>
-        )}
+        <div className='mt-4 flex justify-end'>
+          <button
+            onClick={() => {
+              showAlert({
+                desc: '프로필을 삭제하면 모든 데이터가 삭제됩니다. 정말로 삭제하시겠습니까?',
+                onConfirm: () => resetProfile(),
+              });
+            }}
+            className='bg-primary-50 text-primary-700 hover:bg-primary-100 focus:ring-primary-300 dark:bg-primary-900 dark:text-primary-100 dark:hover:bg-primary-800 flex items-center gap-1 rounded-md px-3 py-1 text-xs shadow transition-colors duration-150 focus:ring-2 focus:outline-none'
+          >
+            <TrashIcon size={16} className='text-primary-400 dark:text-primary-300' />
+            <span className='font-semibold'>프로필 삭제</span>
+          </button>
+        </div>
       </div>
     </div>
   );

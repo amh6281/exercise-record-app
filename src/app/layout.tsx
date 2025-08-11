@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Navigation from '@/components/layout/Navigation';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import AlertModal from '@/components/layout/AlertModal';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Header />
           <main className='min-h-screen pt-16 pb-16'>{children}</main>
           <Navigation />
+          <AlertModal />
         </ThemeProvider>
       </body>
     </html>
