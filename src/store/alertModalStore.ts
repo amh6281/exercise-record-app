@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export interface AlertModalState {
+interface AlertModalState {
   isOpen: boolean;
   desc: string;
   onConfirm?: () => void;

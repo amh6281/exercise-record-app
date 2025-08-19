@@ -4,6 +4,7 @@ import React from 'react';
 import {
   AlertDialog,
   AlertDialogAction,
+  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
@@ -33,7 +34,15 @@ const AlertModal = () => {
           <AlertDialogDescription>{desc}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogAction onClick={handleConfirm}>확인</AlertDialogAction>
+          <AlertDialogCancel className='border-choco-300 text-choco-700 hover:bg-choco-50 dark:border-choco-600 dark:text-choco-300 dark:hover:bg-choco-700'>
+            취소
+          </AlertDialogCancel>
+          <AlertDialogAction
+            onClick={handleConfirm}
+            className='bg-choco-600 hover:bg-choco-700 dark:bg-choco-500 dark:hover:bg-choco-600 text-white'
+          >
+            확인
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
