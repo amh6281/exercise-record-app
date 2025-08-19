@@ -11,6 +11,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 import { RoutineModal } from './routine';
 import { getTodayRoutine } from '@/lib/routine';
+import { useAlertModalStore } from '@/store/alertModalStore';
 
 interface SplitRoutineCardProps {
   routine: Routine;
@@ -22,6 +23,8 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
   const profile = useProfileStore((state) => state.profile);
   const removeRoutine = useRoutineStore((state) => state.removeRoutine);
   const duplicateRoutine = useRoutineStore((state) => state.duplicateRoutine);
+
+  const openModal = useAlertModalStore((state) => state.openModal);
 
   // 오늘 요일에 해당하는 루틴 정보
   const todayRoutine = getTodayRoutine(profile);
@@ -65,7 +68,12 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
               복사
             </button>
             <button
-              onClick={() => removeRoutine(id)}
+              onClick={() =>
+                openModal({
+                  desc: '해당 루틴을 삭제하시겠습니까?',
+                  onConfirm: () => removeRoutine(id),
+                })
+              }
               className='flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm text-red-600 transition-colors hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20'
             >
               <TrashIcon size={14} />
