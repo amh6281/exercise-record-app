@@ -61,7 +61,12 @@ const SplitRoutineCard = ({ routine }: SplitRoutineCardProps) => {
               }
             />
             <button
-              onClick={() => duplicateRoutine(id)}
+              onClick={() =>
+                openModal({
+                  desc: '해당 루틴을 복사하시겠습니까?',
+                  onConfirm: () => duplicateRoutine(id),
+                })
+              }
               className='hover:bg-cool-50 dark:hover:bg-choco-600 text-choco-700 dark:text-choco-100 flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm transition-colors'
             >
               <CopyIcon size={14} />
