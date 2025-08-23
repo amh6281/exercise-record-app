@@ -34,12 +34,12 @@ const AlertModal = () => {
           <AlertDialogDescription>{desc}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className='border-choco-300 text-choco-700 hover:bg-choco-50 dark:border-choco-600 dark:text-choco-300 dark:hover:bg-choco-700'>
+          <AlertDialogCancel className='border-choco-300 text-choco-700 hover:bg-choco-50 dark:border-choco-600 dark:text-choco-300 dark:hover:bg-choco-700 cursor-pointer'>
             취소
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleConfirm}
-            className='bg-choco-600 hover:bg-choco-700 dark:bg-choco-500 dark:hover:bg-choco-600 text-white'
+            className='bg-choco-600 hover:bg-choco-700 dark:bg-choco-500 dark:hover:bg-choco-600 cursor-pointer text-white'
           >
             확인
           </AlertDialogAction>
