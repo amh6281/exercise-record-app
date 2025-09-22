@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const HomePage = () => {
   return (
-    <div className='from-cool-50 to-primary-50/30 dark:from-choco-900 dark:via-choco-800 dark:to-primary-900/20 min-h-screen bg-gradient-to-br via-white'>
+    <div className='from-cool-50 to-primary-50/30 dark:from-choco-900 dark:via-choco-800 dark:to-primary-900/20 min-h-screen bg-linear-to-br via-white'>
       <div className='container mx-auto px-4 py-8'>
         <div className='mx-auto max-w-6xl'>
           {/* 헤더 섹션 */}
@@ -27,11 +27,11 @@ const HomePage = () => {
 
             {/* 구분선 */}
             <div className='mx-auto flex max-w-md items-center justify-center space-x-4'>
-              <div className='via-cool-300 dark:via-choco-600 h-px flex-1 bg-gradient-to-r from-transparent to-transparent'></div>
-              <div className='from-primary-500 to-primary-600 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br'>
+              <div className='via-cool-300 dark:via-choco-600 h-px flex-1 bg-linear-to-r from-transparent to-transparent'></div>
+              <div className='from-primary-500 to-primary-600 flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br'>
                 <span className='text-sm text-white'>✨</span>
               </div>
-              <div className='via-cool-300 dark:via-choco-600 h-px flex-1 bg-gradient-to-r from-transparent to-transparent'></div>
+              <div className='via-cool-300 dark:via-choco-600 h-px flex-1 bg-linear-to-r from-transparent to-transparent'></div>
             </div>
 
             {/* 홈 요약 섹션 */}

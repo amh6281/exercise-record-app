@@ -13,7 +13,7 @@ const TodayDashboard = () => {
   return (
     <div className='space-y-8'>
       {/* 메인 운동 카드 */}
-      <div className='from-primary-500 via-primary-600 to-primary-700 relative overflow-hidden rounded-3xl bg-gradient-to-br p-8 text-white shadow-2xl'>
+      <div className='from-primary-500 via-primary-600 to-primary-700 relative overflow-hidden rounded-3xl bg-linear-to-br p-8 text-white shadow-2xl'>
         {/* 배경 장식 */}
         <div className='absolute -top-10 -right-10 h-32 w-32 rounded-full bg-white/10'></div>
         <div className='absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/5'></div>
@@ -37,7 +37,7 @@ const TodayDashboard = () => {
                 router.push('/my-routines');
               }}
             >
-              <div className='via-primary-100/50 absolute inset-0 -translate-x-full skew-x-12 transform bg-gradient-to-r from-transparent to-transparent transition-transform duration-700 group-hover:translate-x-full'></div>
+              <div className='via-primary-100/50 absolute inset-0 -translate-x-full skew-x-12 transform bg-linear-to-r from-transparent to-transparent transition-transform duration-700 group-hover:translate-x-full'></div>
               <span className='relative flex items-center space-x-2'>
                 <span>🏋️</span>
                 <span>운동 시작하기</span>
@@ -50,7 +50,7 @@ const TodayDashboard = () => {
       {/* 간단한 운동 팁 */}
       <div className='border-cool-200 dark:border-choco-700 dark:bg-choco-800/50 rounded-2xl border bg-white/80 p-6 backdrop-blur-sm'>
         <div className='flex items-center justify-center space-x-3'>
-          <div className='flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-orange-500'>
+          <div className='flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-yellow-400 to-orange-500'>
             <span className='text-lg'>💡</span>
           </div>
           <div className='text-center'>

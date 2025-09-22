@@ -16,7 +16,7 @@ const WorkoutTips = ({ tips }: WorkoutTipsProps) => {
       <ul className='space-y-2'>
         {tips.map((tip, index) => (
           <li key={index} className='flex items-start gap-2'>
-            <div className='bg-primary-500 dark:bg-primary-400 mt-2 h-2 w-2 flex-shrink-0 rounded-full'></div>
+            <div className='bg-primary-500 dark:bg-primary-400 mt-2 h-2 w-2 shrink-0 rounded-full'></div>
             <p className='text-cool-600 dark:text-cool-200'>{tip}</p>
           </li>
         ))}

@@ -148,10 +148,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
             const currentRoutine = weeklyRoutines.find((r) => r.day === day)?.routine || '';
             return (
               <div key={day} className='flex items-center gap-3'>
-                <Label
-                  htmlFor={day}
-                  className='text-choco-700 dark:text-choco-100 w-16 flex-shrink-0 text-sm font-medium'
-                >
+                <Label htmlFor={day} className='text-choco-700 dark:text-choco-100 w-16 shrink-0 text-sm font-medium'>
                   {label}
                 </Label>
                 <Select value={currentRoutine} onValueChange={(value) => handleRoutineChange(day, value)}>
@@ -183,7 +180,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
       {/* 분할 타입 설명 */}
       <div className='bg-cool-50 dark:bg-choco-700 border-cool-100 dark:border-choco-600 rounded-lg border p-4'>
         <div className='flex items-start gap-3'>
-          <div className='bg-primary-500 dark:bg-primary-400 mt-2 h-2 w-2 flex-shrink-0 rounded-full'></div>
+          <div className='bg-primary-500 dark:bg-primary-400 mt-2 h-2 w-2 shrink-0 rounded-full'></div>
           <p className='text-cool-600 dark:text-cool-200 text-sm leading-relaxed'>
             {SPLIT_DESCRIPTIONS[selectedSplitType]}
           </p>
