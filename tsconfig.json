@@ -11,11 +11,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-<<<<<<< HEAD
-    "jsx": "preserve",
-=======
     "jsx": "react-jsx",
->>>>>>> c603cb4 (Initial commit from Create Next App)
     "incremental": true,
     "plugins": [
       {
@@ -23,17 +19,7 @@
       }
     ],
     "paths": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-=======
       "@/*": ["./*"]
-=======
-      "@/*": ["./src/*"]
->>>>>>> 6934de9 (chore: 초기설정)
     }
   },
   "include": [
@@ -44,6 +30,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
->>>>>>> c603cb4 (Initial commit from Create Next App)
   "exclude": ["node_modules"]
 }
