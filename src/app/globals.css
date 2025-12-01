@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
@@ -179,3 +180,6 @@
     @apply dark:bg-choco-800 bg-white;
   }
 }
+=======
+@import "tailwindcss";
+>>>>>>> 6934de9 (chore: 초기설정)
