@@ -7,7 +7,7 @@ const Header = () => {
         <Link href='/' className='flex items-center gap-2'>
           <span className='text-lg font-semibold tracking-tight'>FitFlow</span>
           <span className='hidden text-xs text-zinc-500 sm:inline'>
-            AI 운동 루틴 & 리포트
+            운동 루틴 조합기
           </span>
         </Link>
         <nav className='flex items-center gap-3 text-sm font-medium text-zinc-600 dark:text-zinc-300'>
