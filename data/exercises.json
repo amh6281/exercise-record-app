@@ -1,0 +1,1762 @@
+{
+  "exercises": [
+    {
+      "id": "bench_press",
+      "name": "벤치프레스",
+      "muscle": ["가슴", "어깨", "삼두"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "평평한 벤치에 등을 대고 누워 발을 바닥에 고정합니다",
+        "어깨 너비보다 약간 넓게 바벨을 잡습니다",
+        "바벨을 가슴 중앙까지 천천히 내립니다",
+        "가슴을 밀어 올리듯 바벨을 올립니다",
+        "팔꿈치는 45도 각도로 유지합니다"
+      ],
+      "commonMistakes": [
+        "팔꿈치를 너무 벌림",
+        "힙을 들고 등이 떨어짐",
+        "바벨을 너무 빠르게 내림"
+      ],
+      "sets": "4×8~10",
+      "alternatives": ["덤벨 프레스", "머신 체스트프레스", "푸시업"],
+      "image": "/images/exercises/bench_press.jpg"
+    },
+    {
+      "id": "incline_dumbbell_press",
+      "name": "인클라인 덤벨프레스",
+      "muscle": ["가슴", "어깨"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "인클라인 벤치를 30~45도로 설정합니다",
+        "덤벨을 어깨 높이에서 시작합니다",
+        "가슴 상부를 향해 덤벨을 밀어 올립니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["각도를 너무 높게 설정", "덤벨을 너무 빠르게 움직임"],
+      "sets": "4×10~12",
+      "alternatives": ["인클라인 바벨프레스", "인클라인 푸시업"],
+      "image": "/images/exercises/incline_dumbbell_press.jpg"
+    },
+    {
+      "id": "dumbbell_press",
+      "name": "덤벨 프레스",
+      "muscle": ["가슴", "어깨", "삼두"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "평평한 벤치에 누워 덤벨을 어깨 높이에 위치시킵니다",
+        "가슴 중앙을 향해 덤벨을 밀어 올립니다",
+        "천천히 원래 위치로 내립니다"
+      ],
+      "commonMistakes": [
+        "덤벨을 너무 멀리 벌림",
+        "등을 과도하게 아치형으로 만듦"
+      ],
+      "sets": "4×10~12",
+      "alternatives": ["벤치프레스", "머신 체스트프레스"],
+      "image": "/images/exercises/dumbbell_press.jpg"
+    },
+    {
+      "id": "push_up",
+      "name": "푸시업",
+      "muscle": ["가슴", "어깨", "삼두"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "팔굽혀펴기 자세를 취합니다",
+        "몸을 일직선으로 유지합니다",
+        "가슴이 바닥에 거의 닿을 때까지 내립니다",
+        "원래 위치로 밀어 올립니다"
+      ],
+      "commonMistakes": ["엉덩이를 너무 높이 올림", "허리를 과도하게 구부림"],
+      "sets": "3×10~15",
+      "alternatives": ["딥스", "벤치프레스"],
+      "image": "/images/exercises/push_up.jpg"
+    },
+    {
+      "id": "cable_fly",
+      "name": "케이블 플라이",
+      "muscle": ["가슴"],
+      "equipment": "머신",
+      "level": "중급",
+      "instructions": [
+        "케이블 머신 중앙에 서서 양손으로 핸들을 잡습니다",
+        "팔을 약간 구부린 상태로 앞으로 모읍니다",
+        "가슴을 수축시키며 천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["팔을 완전히 펴서 관절에 무리", "너무 빠르게 움직임"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 플라이", "펙덱 플라이"],
+      "image": "/images/exercises/cable_fly.jpg"
+    },
+    {
+      "id": "deadlift",
+      "name": "데드리프트",
+      "muscle": ["등", "하체", "둔근"],
+      "equipment": "바벨",
+      "level": "상급",
+      "instructions": [
+        "바벨 앞에 서서 발을 어깨 너비로 벌립니다",
+        "허리를 곧게 펴고 무릎을 구부려 바벨을 잡습니다",
+        "등을 곧게 유지하며 일어섭니다",
+        "천천히 바벨을 내립니다"
+      ],
+      "commonMistakes": [
+        "등을 구부림",
+        "무릎을 너무 앞으로 내밀음",
+        "목을 과도하게 뒤로 젖힘"
+      ],
+      "sets": "5×5",
+      "alternatives": ["루마니안 데드리프트", "스모 데드리프트"],
+      "image": "/images/exercises/deadlift.jpg"
+    },
+    {
+      "id": "pull_up",
+      "name": "풀업",
+      "muscle": ["등", "이두"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "풀업 바에 매달립니다",
+        "팔꿈치를 구부려 몸을 위로 당깁니다",
+        "턱이 바 위로 올라가도록 합니다",
+        "천천히 내려옵니다"
+      ],
+      "commonMistakes": ["흔들리며 올라감", "완전히 내려오지 않음"],
+      "sets": "3×8~12",
+      "alternatives": ["래트 풀다운", "어시스티드 풀업"],
+      "image": "/images/exercises/pull_up.jpg"
+    },
+    {
+      "id": "barbell_row",
+      "name": "바벨 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "앞으로 구부려 바벨을 잡습니다",
+        "등을 곧게 유지합니다",
+        "바벨을 복부 쪽으로 당깁니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["등을 구부림", "바벨을 너무 높이 당김"],
+      "sets": "4×8~10",
+      "alternatives": ["덤벨 로우", "T바 로우"],
+      "image": "/images/exercises/barbell_row.jpg"
+    },
+    {
+      "id": "seated_row",
+      "name": "시티드 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "시티드 로우 머신에 앉습니다",
+        "발판에 발을 고정합니다",
+        "핸들을 복부 쪽으로 당깁니다",
+        "등을 수축시키며 천천히 돌아옵니다"
+      ],
+      "commonMistakes": ["몸을 뒤로 과도하게 젖힘", "어깨를 앞으로 내밀음"],
+      "sets": "4×10~12",
+      "alternatives": ["케이블 로우", "바벨 로우"],
+      "image": "/images/exercises/seated_row.jpg"
+    },
+    {
+      "id": "lat_pulldown",
+      "name": "래트 풀다운",
+      "muscle": ["등", "이두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "래트 풀다운 머신에 앉습니다",
+        "넓은 그립으로 바를 잡습니다",
+        "가슴 쪽으로 바를 당깁니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["목 뒤로 당김", "상체를 뒤로 과도하게 젖힘"],
+      "sets": "4×10~12",
+      "alternatives": ["풀업", "케이블 풀다운"],
+      "image": "/images/exercises/lat_pulldown.jpg"
+    },
+    {
+      "id": "overhead_press",
+      "name": "오버헤드 프레스",
+      "muscle": ["어깨", "삼두"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "바벨을 어깨 높이에서 잡습니다",
+        "등을 곧게 유지합니다",
+        "머리 위로 바벨을 밀어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": [
+        "등을 과도하게 아치형으로 만듦",
+        "바벨을 앞으로 기울임"
+      ],
+      "sets": "4×8~10",
+      "alternatives": ["덤벨 숄더 프레스", "머신 프레스"],
+      "image": "/images/exercises/overhead_press.jpg"
+    },
+    {
+      "id": "dumbbell_shoulder_press",
+      "name": "덤벨 숄더 프레스",
+      "muscle": ["어깨", "삼두"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "의자에 앉아 덤벨을 어깨 높이에 위치시킵니다",
+        "머리 위로 덤벨을 밀어 올립니다",
+        "천천히 원래 위치로 내립니다"
+      ],
+      "commonMistakes": [
+        "덤벨을 너무 앞으로 기울임",
+        "등을 과도하게 아치형으로 만듦"
+      ],
+      "sets": "4×10~12",
+      "alternatives": ["바벨 오버헤드 프레스", "머신 프레스"],
+      "image": "/images/exercises/dumbbell_shoulder_press.jpg"
+    },
+    {
+      "id": "lateral_raise",
+      "name": "사이드 레터럴 레이즈",
+      "muscle": ["어깨"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "양손에 덤벨을 들고 서 있습니다",
+        "팔을 옆으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["너무 무거운 무게 사용", "관성에 의존하여 올림"],
+      "sets": "3×12~15",
+      "alternatives": ["케이블 레터럴", "머신 레터럴"],
+      "image": "/images/exercises/lateral_raise.jpg"
+    },
+    {
+      "id": "rear_delt_fly",
+      "name": "리어 델트 플라이",
+      "muscle": ["어깨"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "앞으로 구부려 덤벨을 잡습니다",
+        "팔을 옆으로 벌립니다",
+        "어깨 뒤쪽을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["너무 무거운 무게 사용", "등을 구부림"],
+      "sets": "3×12~15",
+      "alternatives": ["케이블 리어 플라이", "페이스 풀"],
+      "image": "/images/exercises/rear_delt_fly.jpg"
+    },
+    {
+      "id": "front_raise",
+      "name": "프론트 레이즈",
+      "muscle": ["어깨"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "양손에 덤벨을 들고 서 있습니다",
+        "팔을 앞으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["너무 빠르게 움직임", "관성에 의존"],
+      "sets": "3×12~15",
+      "alternatives": ["바벨 프론트 레이즈", "케이블 프론트 레이즈"],
+      "image": "/images/exercises/front_raise.jpg"
+    },
+    {
+      "id": "squat",
+      "name": "스쿼트",
+      "muscle": ["하체", "둔근", "복근"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "바벨을 어깨에 올립니다",
+        "발을 어깨 너비로 벌립니다",
+        "무릎을 구부려 내려갑니다",
+        "대퇴부가 바닥과 평행이 될 때까지 내려갑니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": [
+        "무릎이 발가락을 넘어감",
+        "등을 구부림",
+        "무릎을 안쪽으로 모음"
+      ],
+      "sets": "4×8~10",
+      "alternatives": ["고바 스쿼트", "프론트 스쿼트", "레그 프레스"],
+      "image": "/images/exercises/squat.jpg"
+    },
+    {
+      "id": "leg_press",
+      "name": "레그 프레스",
+      "muscle": ["하체", "둔근"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "레그 프레스 머신에 앉습니다",
+        "발을 어깨 너비로 플랫폼에 올립니다",
+        "무릎을 구부려 무게를 내립니다",
+        "다리를 펴서 무게를 밀어 올립니다"
+      ],
+      "commonMistakes": ["무릎을 완전히 펴지 않음", "무릎을 안쪽으로 모음"],
+      "sets": "4×10~12",
+      "alternatives": ["스쿼트", "핵 스쿼트"],
+      "image": "/images/exercises/leg_press.jpg"
+    },
+    {
+      "id": "leg_curl",
+      "name": "레그 컬",
+      "muscle": ["햄스트링"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "레그 컬 머신에 엎드립니다",
+        "발목 뒤에 패드를 위치시킵니다",
+        "무릎을 구부려 패드를 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["엉덩이를 들어 올림", "너무 빠르게 움직임"],
+      "sets": "4×10~12",
+      "alternatives": ["스티프 레그 데드리프트", "굿모닝"],
+      "image": "/images/exercises/leg_curl.jpg"
+    },
+    {
+      "id": "leg_extension",
+      "name": "레그 익스텐션",
+      "muscle": ["대퇴사두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "레그 익스텐션 머신에 앉습니다",
+        "발목 앞에 패드를 위치시킵니다",
+        "다리를 펴서 패드를 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["등을 뒤로 과도하게 젖힘", "너무 빠르게 움직임"],
+      "sets": "4×10~12",
+      "alternatives": ["스쿼트", "런지"],
+      "image": "/images/exercises/leg_extension.jpg"
+    },
+    {
+      "id": "lunge",
+      "name": "런지",
+      "muscle": ["하체", "둔근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "한 발을 앞으로 내딛습니다",
+        "뒤 무릎이 바닥에 거의 닿을 때까지 내려갑니다",
+        "앞 다리로 밀어 올립니다",
+        "반대편 다리로 반복합니다"
+      ],
+      "commonMistakes": ["무릎이 발가락을 넘어감", "상체를 앞으로 너무 기울임"],
+      "sets": "3×10~12 (각 다리)",
+      "alternatives": ["불가리안 스플릿 스쿼트", "워킹 런지"],
+      "image": "/images/exercises/lunge.jpg"
+    },
+    {
+      "id": "barbell_curl",
+      "name": "바벨 컬",
+      "muscle": ["이두"],
+      "equipment": "바벨",
+      "level": "초급",
+      "instructions": [
+        "바벨을 어깨 너비로 잡습니다",
+        "팔꿈치를 고정한 채 바벨을 들어 올립니다",
+        "이두박근을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12",
+      "alternatives": ["덤벨 컬", "케이블 컬"],
+      "image": "/images/exercises/barbell_curl.jpg"
+    },
+    {
+      "id": "dumbbell_curl",
+      "name": "덤벨 컬",
+      "muscle": ["이두"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "양손에 덤벨을 들고 서 있습니다",
+        "팔꿈치를 고정한 채 덤벨을 들어 올립니다",
+        "이두박근을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12",
+      "alternatives": ["바벨 컬", "케이블 컬"],
+      "image": "/images/exercises/dumbbell_curl.jpg"
+    },
+    {
+      "id": "triceps_dip",
+      "name": "트라이셉스 딥",
+      "muscle": ["삼두"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "딥스 바에 매달립니다",
+        "팔꿈치를 구부려 몸을 내립니다",
+        "삼두로 몸을 밀어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["어깨를 앞으로 내밀음", "너무 깊이 내려감"],
+      "sets": "3×8~12",
+      "alternatives": ["벤치 딥", "케이블 푸시다운"],
+      "image": "/images/exercises/triceps_dip.jpg"
+    },
+    {
+      "id": "triceps_pushdown",
+      "name": "트라이셉스 푸시다운",
+      "muscle": ["삼두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "케이블 머신 앞에 서서 로프를 잡습니다",
+        "팔꿈치를 고정한 채 아래로 밀어 내립니다",
+        "삼두를 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 앞으로 기울임"],
+      "sets": "4×10~12",
+      "alternatives": ["오버헤드 익스텐션", "딥스"],
+      "image": "/images/exercises/triceps_pushdown.jpg"
+    },
+    {
+      "id": "hammer_curl",
+      "name": "해머 컬",
+      "muscle": ["이두", "전완"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "양손에 덤벨을 중립 그립으로 잡습니다",
+        "팔꿈치를 고정한 채 덤벨을 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12",
+      "alternatives": ["바벨 컬", "케이블 해머 컬"],
+      "image": "/images/exercises/hammer_curl.jpg"
+    },
+    {
+      "id": "burpee",
+      "name": "버피",
+      "muscle": ["전신"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "서 있는 상태에서 시작합니다",
+        "무릎을 구부려 스쿼트 자세를 취합니다",
+        "팔굽혀펴기 자세로 뛰어 내립니다",
+        "푸시업을 한 번 합니다",
+        "다시 스쿼트 자세로 돌아와 점프합니다"
+      ],
+      "commonMistakes": ["등을 구부림", "너무 빠르게 해서 자세가 무너짐"],
+      "sets": "3×10~15",
+      "alternatives": ["마운틴 클라이머", "점프 스쿼트"],
+      "image": "/images/exercises/burpee.jpg"
+    },
+    {
+      "id": "mountain_climber",
+      "name": "마운틴 클라이머",
+      "muscle": ["전신", "복근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "팔굽혀펴기 자세를 취합니다",
+        "한 무릎을 가슴 쪽으로 당깁니다",
+        "빠르게 다리를 교체합니다",
+        "몸을 일직선으로 유지합니다"
+      ],
+      "commonMistakes": ["엉덩이를 너무 높이 올림", "등을 구부림"],
+      "sets": "3×20~30초",
+      "alternatives": ["버피", "플랭크"],
+      "image": "/images/exercises/mountain_climber.jpg"
+    },
+    {
+      "id": "plank",
+      "name": "플랭크",
+      "muscle": ["복근", "전신"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "팔굽혀펴기 자세를 취합니다",
+        "팔꿈치를 구부려 전완으로 지지합니다",
+        "몸을 일직선으로 유지합니다",
+        "복근에 힘을 줍니다"
+      ],
+      "commonMistakes": ["엉덩이를 너무 높이 올림", "허리를 과도하게 구부림"],
+      "sets": "3×30~60초",
+      "alternatives": ["사이드 플랭크", "마운틴 클라이머"],
+      "image": "/images/exercises/plank.jpg"
+    },
+    {
+      "id": "jump_squat",
+      "name": "점프 스쿼트",
+      "muscle": ["하체", "둔근"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "스쿼트 자세를 취합니다",
+        "무릎을 구부려 내려갑니다",
+        "폭발적으로 점프합니다",
+        "부드럽게 착지합니다"
+      ],
+      "commonMistakes": [
+        "무릎이 발가락을 넘어감",
+        "착지 시 무릎이 안쪽으로 모임"
+      ],
+      "sets": "3×10~15",
+      "alternatives": ["스쿼트", "박스 점프"],
+      "image": "/images/exercises/jump_squat.jpg"
+    },
+    {
+      "id": "incline_barbell_press",
+      "name": "인클라인 바벨프레스",
+      "muscle": ["가슴", "어깨"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "인클라인 벤치를 30~45도로 설정합니다",
+        "바벨을 어깨 너비보다 약간 넓게 잡습니다",
+        "가슴 상부를 향해 바벨을 밀어 올립니다",
+        "천천히 원래 위치로 내립니다"
+      ],
+      "commonMistakes": ["각도를 너무 높게 설정", "바벨을 너무 빠르게 움직임"],
+      "sets": "4×8~10",
+      "alternatives": ["인클라인 덤벨프레스", "인클라인 푸시업"],
+      "image": "/images/exercises/incline_barbell_press.jpg"
+    },
+    {
+      "id": "dumbbell_fly",
+      "name": "덤벨 플라이",
+      "muscle": ["가슴"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "평평한 벤치에 누워 덤벨을 위로 올립니다",
+        "팔을 약간 구부린 상태로 옆으로 벌립니다",
+        "가슴을 수축시키며 원래 위치로 모읍니다",
+        "천천히 벌립니다"
+      ],
+      "commonMistakes": [
+        "팔을 완전히 펴서 관절에 무리",
+        "너무 무거운 무게 사용"
+      ],
+      "sets": "3×12~15",
+      "alternatives": ["케이블 플라이", "펙덱 플라이"],
+      "image": "/images/exercises/dumbbell_fly.jpg"
+    },
+    {
+      "id": "machine_chest_press",
+      "name": "머신 체스트프레스",
+      "muscle": ["가슴", "어깨", "삼두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "체스트 프레스 머신에 앉습니다",
+        "등을 고정합니다",
+        "핸들을 앞으로 밀어 올립니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["등을 떨어뜨림", "너무 빠르게 움직임"],
+      "sets": "4×10~12",
+      "alternatives": ["벤치프레스", "덤벨 프레스"],
+      "image": "/images/exercises/machine_chest_press.jpg"
+    },
+    {
+      "id": "pec_deck_fly",
+      "name": "펙덱 플라이",
+      "muscle": ["가슴"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "펙덱 머신에 앉습니다",
+        "팔꿈치를 패드에 위치시킵니다",
+        "팔을 모아 가슴을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["너무 무거운 무게 사용", "등을 떨어뜨림"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 플라이", "케이블 플라이"],
+      "image": "/images/exercises/pec_deck_fly.jpg"
+    },
+    {
+      "id": "dips",
+      "name": "딥스",
+      "muscle": ["가슴", "삼두", "어깨"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "딥스 바에 매달립니다",
+        "팔꿈치를 구부려 몸을 내립니다",
+        "가슴과 삼두로 몸을 밀어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["어깨를 앞으로 내밀음", "너무 깊이 내려감"],
+      "sets": "3×8~12",
+      "alternatives": ["벤치 딥", "트라이셉스 딥"],
+      "image": "/images/exercises/dips.jpg"
+    },
+    {
+      "id": "romanian_deadlift",
+      "name": "루마니안 데드리프트",
+      "muscle": ["등", "햄스트링", "둔근"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "바벨을 잡고 서 있습니다",
+        "무릎을 약간 구부립니다",
+        "허리를 곧게 유지하며 앞으로 구부립니다",
+        "햄스트링이 늘어나는 느낌을 느낍니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": ["등을 구부림", "무릎을 너무 구부림"],
+      "sets": "4×8~10",
+      "alternatives": ["데드리프트", "굿모닝"],
+      "image": "/images/exercises/romanian_deadlift.jpg"
+    },
+    {
+      "id": "t_bar_row",
+      "name": "T바 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "T바 앞에 서서 앞으로 구부립니다",
+        "T바를 잡습니다",
+        "복부 쪽으로 당깁니다",
+        "등을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["등을 구부림", "바를 너무 높이 당김"],
+      "sets": "4×8~10",
+      "alternatives": ["바벨 로우", "덤벨 로우"],
+      "image": "/images/exercises/t_bar_row.jpg"
+    },
+    {
+      "id": "cable_row",
+      "name": "케이블 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "케이블 로우 머신에 앉습니다",
+        "발을 패드에 고정합니다",
+        "핸들을 복부 쪽으로 당깁니다",
+        "등을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["몸을 뒤로 과도하게 젖힘", "어깨를 앞으로 내밀음"],
+      "sets": "4×10~12",
+      "alternatives": ["시티드 로우", "바벨 로우"],
+      "image": "/images/exercises/cable_row.jpg"
+    },
+    {
+      "id": "one_arm_dumbbell_row",
+      "name": "원암 덤벨 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "한 손과 한 무릎을 벤치에 올립니다",
+        "다른 손으로 덤벨을 잡습니다",
+        "덤벨을 복부 쪽으로 당깁니다",
+        "등을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["등을 구부림", "덤벨을 너무 높이 당김"],
+      "sets": "4×8~10 (각 팔)",
+      "alternatives": ["바벨 로우", "케이블 로우"],
+      "image": "/images/exercises/one_arm_dumbbell_row.jpg"
+    },
+    {
+      "id": "pendlay_row",
+      "name": "펜들레이 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "바벨",
+      "level": "상급",
+      "instructions": [
+        "바벨 앞에 서서 앞으로 구부립니다",
+        "바벨을 바닥에서 잡습니다",
+        "폭발적으로 복부 쪽으로 당깁니다",
+        "바벨을 바닥에 놓습니다",
+        "반복합니다"
+      ],
+      "commonMistakes": ["등을 구부림", "너무 빠르게 해서 자세가 무너짐"],
+      "sets": "5×5",
+      "alternatives": ["바벨 로우", "T바 로우"],
+      "image": "/images/exercises/pendlay_row.jpg"
+    },
+    {
+      "id": "cable_pullover",
+      "name": "케이블 풀오버",
+      "muscle": ["가슴", "등"],
+      "equipment": "머신",
+      "level": "중급",
+      "instructions": [
+        "케이블 머신 앞에 무릎을 꿇고 앉습니다",
+        "로프를 잡고 머리 위로 올립니다",
+        "가슴 쪽으로 당깁니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["팔꿈치를 너무 구부림", "등을 구부림"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 풀오버", "케이블 플라이"],
+      "image": "/images/exercises/cable_pullover.jpg"
+    },
+    {
+      "id": "arnold_press",
+      "name": "아놀드 프레스",
+      "muscle": ["어깨", "삼두"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "의자에 앉아 덤벨을 어깨 높이에서 잡습니다",
+        "팔꿈치를 앞으로 돌리며 올립니다",
+        "머리 위로 밀어 올립니다",
+        "역순으로 내립니다"
+      ],
+      "commonMistakes": ["너무 빠르게 움직임", "등을 과도하게 아치형으로 만듦"],
+      "sets": "4×10~12",
+      "alternatives": ["덤벨 숄더 프레스", "오버헤드 프레스"],
+      "image": "/images/exercises/arnold_press.jpg"
+    },
+    {
+      "id": "cable_lateral",
+      "name": "케이블 레터럴",
+      "muscle": ["어깨"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "케이블 머신 옆에 서서 한 손으로 핸들을 잡습니다",
+        "팔을 옆으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["상체를 옆으로 기울임", "관성에 의존"],
+      "sets": "3×12~15 (각 팔)",
+      "alternatives": ["덤벨 레터럴 레이즈", "머신 레터럴"],
+      "image": "/images/exercises/cable_lateral.jpg"
+    },
+    {
+      "id": "cable_rear_fly",
+      "name": "케이블 리어 플라이",
+      "muscle": ["어깨"],
+      "equipment": "머신",
+      "level": "중급",
+      "instructions": [
+        "케이블 머신 중앙에 서서 양손으로 핸들을 잡습니다",
+        "앞으로 약간 구부립니다",
+        "팔을 옆으로 벌립니다",
+        "어깨 뒤쪽을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["너무 무거운 무게 사용", "등을 구부림"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 리어 델트 플라이", "페이스 풀"],
+      "image": "/images/exercises/cable_rear_fly.jpg"
+    },
+    {
+      "id": "face_pull",
+      "name": "페이스 풀",
+      "muscle": ["어깨", "등"],
+      "equipment": "머신",
+      "level": "중급",
+      "instructions": [
+        "케이블 머신 앞에 서서 로프를 잡습니다",
+        "로프를 얼굴 높이로 당깁니다",
+        "어깨 뒤쪽을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["너무 앞으로 당김", "어깨를 앞으로 내밀음"],
+      "sets": "4×12~15",
+      "alternatives": ["리어 델트 플라이", "케이블 리어 플라이"],
+      "image": "/images/exercises/face_pull.jpg"
+    },
+    {
+      "id": "upright_row",
+      "name": "업라이트 로우",
+      "muscle": ["어깨", "승모근"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "바벨을 잡고 서 있습니다",
+        "바벨을 턱 높이까지 들어 올립니다",
+        "팔꿈치를 위로 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["바벨을 너무 높이 올림", "어깨를 앞으로 내밀음"],
+      "sets": "4×10~12",
+      "alternatives": ["사이드 레터럴 레이즈", "프론트 레이즈"],
+      "image": "/images/exercises/upright_row.jpg"
+    },
+    {
+      "id": "goblet_squat",
+      "name": "고바 스쿼트",
+      "muscle": ["하체", "둔근", "복근"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "덤벨을 가슴 앞에 잡고 서 있습니다",
+        "무릎을 구부려 내려갑니다",
+        "대퇴부가 바닥과 평행이 될 때까지 내려갑니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": ["무릎이 발가락을 넘어감", "등을 구부림"],
+      "sets": "4×10~12",
+      "alternatives": ["스쿼트", "레그 프레스"],
+      "image": "/images/exercises/goblet_squat.jpg"
+    },
+    {
+      "id": "front_squat",
+      "name": "프론트 스쿼트",
+      "muscle": ["하체", "둔근", "복근"],
+      "equipment": "바벨",
+      "level": "상급",
+      "instructions": [
+        "바벨을 앞어깨에 올립니다",
+        "팔꿈치를 앞으로 올립니다",
+        "무릎을 구부려 내려갑니다",
+        "대퇴부가 바닥과 평행이 될 때까지 내려갑니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": ["바벨을 떨어뜨림", "등을 구부림"],
+      "sets": "4×8~10",
+      "alternatives": ["스쿼트", "고바 스쿼트"],
+      "image": "/images/exercises/front_squat.jpg"
+    },
+    {
+      "id": "bulgarian_split_squat",
+      "name": "불가리안 스플릿 스쿼트",
+      "muscle": ["하체", "둔근"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "한 발을 뒤로 벤치에 올립니다",
+        "앞 다리로 내려갑니다",
+        "뒤 무릎이 바닥에 거의 닿을 때까지 내려갑니다",
+        "앞 다리로 밀어 올립니다"
+      ],
+      "commonMistakes": ["무릎이 발가락을 넘어감", "상체를 앞으로 너무 기울임"],
+      "sets": "3×10~12 (각 다리)",
+      "alternatives": ["런지", "스쿼트"],
+      "image": "/images/exercises/bulgarian_split_squat.jpg"
+    },
+    {
+      "id": "calf_raise",
+      "name": "카프 레이즈",
+      "muscle": ["종아리"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "카프 레이즈 머신에 서서 어깨에 패드를 올립니다",
+        "발가락으로 서서 종아리를 수축시킵니다",
+        "최대한 높이 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["무릎을 구부림", "너무 빠르게 움직임"],
+      "sets": "4×15~20",
+      "alternatives": ["덤벨 카프 레이즈", "스탠딩 카프 레이즈"],
+      "image": "/images/exercises/calf_raise.jpg"
+    },
+    {
+      "id": "hip_thrust",
+      "name": "힙 스러스트",
+      "muscle": ["둔근", "하체"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "벤치에 등을 대고 앉습니다",
+        "바벨을 엉덩이 위에 올립니다",
+        "둔근을 수축시켜 엉덩이를 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": [
+        "목에 무리가 가도록 과도하게 구부림",
+        "너무 빠르게 움직임"
+      ],
+      "sets": "4×10~12",
+      "alternatives": ["스쿼트", "레그 프레스"],
+      "image": "/images/exercises/hip_thrust.jpg"
+    },
+    {
+      "id": "leg_raise",
+      "name": "레그 레이즈",
+      "muscle": ["복근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "바닥에 누워 손을 엉덩이 아래에 둡니다",
+        "다리를 들어 올립니다",
+        "복근에 힘을 줍니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["등을 과도하게 아치형으로 만듦", "너무 빠르게 움직임"],
+      "sets": "3×15~20",
+      "alternatives": ["크런치", "시트업"],
+      "image": "/images/exercises/leg_raise.jpg"
+    },
+    {
+      "id": "close_grip_bench_press",
+      "name": "클로즈 그립 벤치프레스",
+      "muscle": ["삼두", "가슴"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "평평한 벤치에 누워 어깨 너비로 바벨을 잡습니다",
+        "바벨을 가슴 중앙까지 내립니다",
+        "삼두로 밀어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["그립을 너무 좁게 잡음", "팔꿈치를 너무 벌림"],
+      "sets": "4×8~10",
+      "alternatives": ["트라이셉스 푸시다운", "딥스"],
+      "image": "/images/exercises/close_grip_bench_press.jpg"
+    },
+    {
+      "id": "preacher_curl",
+      "name": "프리처 컬",
+      "muscle": ["이두"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "프리처 벤치에 앉아 팔꿈치를 패드에 올립니다",
+        "바벨을 잡고 들어 올립니다",
+        "이두박근을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 패드에서 떨어뜨림", "너무 빠르게 움직임"],
+      "sets": "4×10~12",
+      "alternatives": ["바벨 컬", "덤벨 컬"],
+      "image": "/images/exercises/preacher_curl.jpg"
+    },
+    {
+      "id": "cable_curl",
+      "name": "케이블 컬",
+      "muscle": ["이두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "케이블 머신 앞에 서서 바를 잡습니다",
+        "팔꿈치를 고정한 채 바를 들어 올립니다",
+        "이두박근을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12",
+      "alternatives": ["바벨 컬", "덤벨 컬"],
+      "image": "/images/exercises/cable_curl.jpg"
+    },
+    {
+      "id": "overhead_extension",
+      "name": "오버헤드 익스텐션",
+      "muscle": ["삼두"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "의자에 앉아 덤벨을 머리 위로 올립니다",
+        "팔꿈치를 고정한 채 덤벨을 뒤로 내립니다",
+        "삼두로 덤벨을 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "너무 무거운 무게 사용"],
+      "sets": "4×10~12",
+      "alternatives": ["트라이셉스 푸시다운", "딥스"],
+      "image": "/images/exercises/overhead_extension.jpg"
+    },
+    {
+      "id": "side_plank",
+      "name": "사이드 플랭크",
+      "muscle": ["복근", "옆구리"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "옆으로 누워 팔꿈치로 지지합니다",
+        "몸을 일직선으로 유지합니다",
+        "복근에 힘을 줍니다",
+        "유지합니다"
+      ],
+      "commonMistakes": ["엉덩이가 떨어짐", "목이 과도하게 구부러짐"],
+      "sets": "3×30~60초 (각 쪽)",
+      "alternatives": ["플랭크", "레그 레이즈"],
+      "image": "/images/exercises/side_plank.jpg"
+    },
+    {
+      "id": "bird_dog",
+      "name": "버드독",
+      "muscle": ["복근", "등", "둔근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "네 발로 서 있습니다",
+        "한 팔과 반대편 다리를 들어 올립니다",
+        "몸을 일직선으로 유지합니다",
+        "천천히 내립니다",
+        "반대편으로 반복합니다"
+      ],
+      "commonMistakes": ["등을 구부림", "너무 빠르게 움직임"],
+      "sets": "3×10~12 (각 쪽)",
+      "alternatives": ["플랭크", "슈퍼맨"],
+      "image": "/images/exercises/bird_dog.jpg"
+    },
+    {
+      "id": "walking_lunge",
+      "name": "워킹 런지",
+      "muscle": ["하체", "둔근"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "한 발을 앞으로 내딛습니다",
+        "뒤 무릎이 바닥에 거의 닿을 때까지 내려갑니다",
+        "앞 다리로 밀어 올립니다",
+        "다음 발을 앞으로 내딛습니다",
+        "반복합니다"
+      ],
+      "commonMistakes": ["무릎이 발가락을 넘어감", "상체를 앞으로 너무 기울임"],
+      "sets": "3×10~12 (각 다리)",
+      "alternatives": ["런지", "불가리안 스플릿 스쿼트"],
+      "image": "/images/exercises/walking_lunge.jpg"
+    },
+    {
+      "id": "box_jump",
+      "name": "박스 점프",
+      "muscle": ["하체", "둔근"],
+      "equipment": "맨몸",
+      "level": "상급",
+      "instructions": [
+        "박스 앞에 서 있습니다",
+        "무릎을 구부려 점프합니다",
+        "박스 위에 착지합니다",
+        "내려옵니다"
+      ],
+      "commonMistakes": [
+        "무릎이 발가락을 넘어감",
+        "착지 시 무릎이 안쪽으로 모임"
+      ],
+      "sets": "3×8~10",
+      "alternatives": ["점프 스쿼트", "스쿼트"],
+      "image": "/images/exercises/box_jump.jpg"
+    },
+    {
+      "id": "good_morning",
+      "name": "굿모닝",
+      "muscle": ["햄스트링", "둔근", "등"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "바벨을 어깨에 올립니다",
+        "무릎을 약간 구부립니다",
+        "허리를 곧게 유지하며 앞으로 구부립니다",
+        "햄스트링이 늘어나는 느낌을 느낍니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": ["등을 구부림", "무릎을 너무 구부림"],
+      "sets": "4×8~10",
+      "alternatives": ["루마니안 데드리프트", "레그 컬"],
+      "image": "/images/exercises/good_morning.jpg"
+    },
+    {
+      "id": "stiff_leg_deadlift",
+      "name": "스티프 레그 데드리프트",
+      "muscle": ["햄스트링", "둔근", "등"],
+      "equipment": "바벨",
+      "level": "중급",
+      "instructions": [
+        "바벨을 잡고 서 있습니다",
+        "무릎을 거의 펴고 앞으로 구부립니다",
+        "햄스트링이 늘어나는 느낌을 느낍니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": ["등을 구부림", "무릎을 완전히 펴서 관절에 무리"],
+      "sets": "4×8~10",
+      "alternatives": ["루마니안 데드리프트", "굿모닝"],
+      "image": "/images/exercises/stiff_leg_deadlift.jpg"
+    },
+    {
+      "id": "assisted_pull_up",
+      "name": "어시스티드 풀업",
+      "muscle": ["등", "이두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "어시스티드 풀업 머신에 무릎을 올립니다",
+        "풀업 바를 잡습니다",
+        "무게를 조정하여 몸을 위로 당깁니다",
+        "턱이 바 위로 올라가도록 합니다",
+        "천천히 내려옵니다"
+      ],
+      "commonMistakes": ["너무 많은 도움을 받음", "흔들리며 올라감"],
+      "sets": "3×8~12",
+      "alternatives": ["래트 풀다운", "풀업"],
+      "image": "/images/exercises/assisted_pull_up.jpg"
+    },
+    {
+      "id": "bench_dip",
+      "name": "벤치 딥",
+      "muscle": ["삼두", "어깨"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "벤치 가장자리에 앉아 손을 벤치에 올립니다",
+        "다리를 앞으로 뻗습니다",
+        "팔꿈치를 구부려 몸을 내립니다",
+        "삼두로 몸을 밀어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["어깨를 앞으로 내밀음", "너무 깊이 내려감"],
+      "sets": "3×10~15",
+      "alternatives": ["딥스", "트라이셉스 푸시다운"],
+      "image": "/images/exercises/bench_dip.jpg"
+    },
+    {
+      "id": "dumbbell_pullover",
+      "name": "덤벨 풀오버",
+      "muscle": ["가슴", "등"],
+      "equipment": "덤벨",
+      "level": "중급",
+      "instructions": [
+        "평평한 벤치에 등을 대고 누워 덤벨을 잡습니다",
+        "덤벨을 머리 뒤로 내립니다",
+        "가슴 쪽으로 당깁니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 너무 구부림", "너무 무거운 무게 사용"],
+      "sets": "3×12~15",
+      "alternatives": ["케이블 풀오버", "케이블 플라이"],
+      "image": "/images/exercises/dumbbell_pullover.jpg"
+    },
+    {
+      "id": "incline_push_up",
+      "name": "인클라인 푸시업",
+      "muscle": ["가슴", "어깨", "삼두"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "손을 벤치나 높은 곳에 올립니다",
+        "팔굽혀펴기 자세를 취합니다",
+        "가슴이 벤치에 거의 닿을 때까지 내립니다",
+        "원래 위치로 밀어 올립니다"
+      ],
+      "commonMistakes": ["엉덩이를 너무 높이 올림", "허리를 과도하게 구부림"],
+      "sets": "3×10~15",
+      "alternatives": ["푸시업", "인클라인 덤벨프레스"],
+      "image": "/images/exercises/incline_push_up.jpg"
+    },
+    {
+      "id": "decline_push_up",
+      "name": "딥라인 푸시업",
+      "muscle": ["가슴", "어깨", "삼두"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "발을 높은 곳에 올립니다",
+        "팔굽혀펴기 자세를 취합니다",
+        "가슴이 바닥에 거의 닿을 때까지 내립니다",
+        "원래 위치로 밀어 올립니다"
+      ],
+      "commonMistakes": ["엉덩이를 너무 높이 올림", "허리를 과도하게 구부림"],
+      "sets": "3×8~12",
+      "alternatives": ["푸시업", "딥스"],
+      "image": "/images/exercises/decline_push_up.jpg"
+    },
+    {
+      "id": "diamond_push_up",
+      "name": "다이아몬드 푸시업",
+      "muscle": ["삼두", "가슴"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "팔굽혀펴기 자세를 취합니다",
+        "손을 다이아몬드 모양으로 만듭니다",
+        "가슴이 손에 거의 닿을 때까지 내립니다",
+        "삼두로 밀어 올립니다"
+      ],
+      "commonMistakes": ["손목에 무리", "너무 빠르게 움직임"],
+      "sets": "3×8~12",
+      "alternatives": ["푸시업", "트라이셉스 푸시다운"],
+      "image": "/images/exercises/diamond_push_up.jpg"
+    },
+    {
+      "id": "cable_crossover",
+      "name": "케이블 크로스오버",
+      "muscle": ["가슴"],
+      "equipment": "머신",
+      "level": "중급",
+      "instructions": [
+        "케이블 머신 중앙에 서서 양손으로 핸들을 잡습니다",
+        "팔을 약간 구부린 상태로 앞으로 모읍니다",
+        "가슴을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["팔을 완전히 펴서 관절에 무리", "너무 빠르게 움직임"],
+      "sets": "3×12~15",
+      "alternatives": ["케이블 플라이", "덤벨 플라이"],
+      "image": "/images/exercises/cable_crossover.jpg"
+    },
+    {
+      "id": "machine_lateral",
+      "name": "머신 레터럴",
+      "muscle": ["어깨"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "레터럴 레이즈 머신에 앉습니다",
+        "팔꿈치를 패드에 위치시킵니다",
+        "팔을 옆으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["너무 무거운 무게 사용", "관성에 의존"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 레터럴 레이즈", "케이블 레터럴"],
+      "image": "/images/exercises/machine_lateral.jpg"
+    },
+    {
+      "id": "machine_shoulder_press",
+      "name": "머신 숄더 프레스",
+      "muscle": ["어깨", "삼두"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "숄더 프레스 머신에 앉습니다",
+        "핸들을 어깨 높이에서 잡습니다",
+        "머리 위로 밀어 올립니다",
+        "천천히 원래 위치로 내립니다"
+      ],
+      "commonMistakes": [
+        "등을 과도하게 아치형으로 만듦",
+        "핸들을 앞으로 기울임"
+      ],
+      "sets": "4×10~12",
+      "alternatives": ["덤벨 숄더 프레스", "오버헤드 프레스"],
+      "image": "/images/exercises/machine_shoulder_press.jpg"
+    },
+    {
+      "id": "barbell_front_raise",
+      "name": "바벨 프론트 레이즈",
+      "muscle": ["어깨"],
+      "equipment": "바벨",
+      "level": "초급",
+      "instructions": [
+        "바벨을 잡고 서 있습니다",
+        "팔을 앞으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["너무 빠르게 움직임", "관성에 의존"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 프론트 레이즈", "케이블 프론트 레이즈"],
+      "image": "/images/exercises/barbell_front_raise.jpg"
+    },
+    {
+      "id": "cable_front_raise",
+      "name": "케이블 프론트 레이즈",
+      "muscle": ["어깨"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "케이블 머신 뒤에 서서 한 손으로 핸들을 잡습니다",
+        "팔을 앞으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["상체를 앞으로 기울임", "관성에 의존"],
+      "sets": "3×12~15 (각 팔)",
+      "alternatives": ["덤벨 프론트 레이즈", "바벨 프론트 레이즈"],
+      "image": "/images/exercises/cable_front_raise.jpg"
+    },
+    {
+      "id": "dumbbell_calf_raise",
+      "name": "덤벨 카프 레이즈",
+      "muscle": ["종아리"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "양손에 덤벨을 들고 서 있습니다",
+        "발가락으로 서서 종아리를 수축시킵니다",
+        "최대한 높이 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["무릎을 구부림", "너무 빠르게 움직임"],
+      "sets": "4×15~20",
+      "alternatives": ["머신 카프 레이즈", "스탠딩 카프 레이즈"],
+      "image": "/images/exercises/dumbbell_calf_raise.jpg"
+    },
+    {
+      "id": "standing_calf_raise",
+      "name": "스탠딩 카프 레이즈",
+      "muscle": ["종아리"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "서 있습니다",
+        "발가락으로 서서 종아리를 수축시킵니다",
+        "최대한 높이 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["무릎을 구부림", "너무 빠르게 움직임"],
+      "sets": "4×15~20",
+      "alternatives": ["머신 카프 레이즈", "덤벨 카프 레이즈"],
+      "image": "/images/exercises/standing_calf_raise.jpg"
+    },
+    {
+      "id": "crunch",
+      "name": "크런치",
+      "muscle": ["복근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "바닥에 누워 무릎을 구부립니다",
+        "손을 머리 뒤에 둡니다",
+        "복근을 수축시켜 상체를 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["목을 당김", "너무 빠르게 움직임"],
+      "sets": "3×15~20",
+      "alternatives": ["시트업", "레그 레이즈"],
+      "image": "/images/exercises/crunch.jpg"
+    },
+    {
+      "id": "sit_up",
+      "name": "시트업",
+      "muscle": ["복근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "바닥에 누워 무릎을 구부립니다",
+        "손을 머리 뒤에 둡니다",
+        "상체를 완전히 일으킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["목을 당김", "너무 빠르게 움직임"],
+      "sets": "3×15~20",
+      "alternatives": ["크런치", "레그 레이즈"],
+      "image": "/images/exercises/sit_up.jpg"
+    },
+    {
+      "id": "superman",
+      "name": "슈퍼맨",
+      "muscle": ["등", "둔근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "배를 깔고 누워 팔과 다리를 뻗습니다",
+        "팔과 다리를 동시에 들어 올립니다",
+        "등과 둔근을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["목을 과도하게 뒤로 젖힘", "너무 빠르게 움직임"],
+      "sets": "3×12~15",
+      "alternatives": ["버드독", "하이퍼 익스텐션"],
+      "image": "/images/exercises/superman.jpg"
+    },
+    {
+      "id": "hyperextension",
+      "name": "하이퍼 익스텐션",
+      "muscle": ["등", "둔근"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "하이퍼 익스텐션 머신에 엎드립니다",
+        "손을 머리 뒤에 둡니다",
+        "상체를 들어 올립니다",
+        "등을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["목을 과도하게 뒤로 젖힘", "너무 빠르게 움직임"],
+      "sets": "3×12~15",
+      "alternatives": ["슈퍼맨", "굿모닝"],
+      "image": "/images/exercises/hyperextension.jpg"
+    },
+    {
+      "id": "russian_twist",
+      "name": "러시안 트위스트",
+      "muscle": ["복근", "옆구리"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "바닥에 앉아 무릎을 구부립니다",
+        "상체를 뒤로 약간 기울입니다",
+        "양손을 모아 좌우로 회전합니다",
+        "복근에 힘을 줍니다"
+      ],
+      "commonMistakes": ["등을 과도하게 구부림", "너무 빠르게 움직임"],
+      "sets": "3×20~30",
+      "alternatives": ["사이드 플랭크", "크런치"],
+      "image": "/images/exercises/russian_twist.jpg"
+    },
+    {
+      "id": "bicycle_crunch",
+      "name": "바이시클 크런치",
+      "muscle": ["복근", "옆구리"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "바닥에 누워 무릎을 구부립니다",
+        "손을 머리 뒤에 둡니다",
+        "무릎과 팔꿈치를 번갈아 가며 모읍니다",
+        "자전거 타는 동작을 합니다"
+      ],
+      "commonMistakes": ["목을 당김", "너무 빠르게 움직임"],
+      "sets": "3×20~30",
+      "alternatives": ["크런치", "러시안 트위스트"],
+      "image": "/images/exercises/bicycle_crunch.jpg"
+    },
+    {
+      "id": "hanging_leg_raise",
+      "name": "행잉 레그 레이즈",
+      "muscle": ["복근"],
+      "equipment": "맨몸",
+      "level": "상급",
+      "instructions": [
+        "풀업 바에 매달립니다",
+        "다리를 들어 올립니다",
+        "복근에 힘을 줍니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["흔들리며 올림", "너무 빠르게 움직임"],
+      "sets": "3×10~15",
+      "alternatives": ["레그 레이즈", "크런치"],
+      "image": "/images/exercises/hanging_leg_raise.jpg"
+    },
+    {
+      "id": "cable_hammer_curl",
+      "name": "케이블 해머 컬",
+      "muscle": ["이두", "전완"],
+      "equipment": "머신",
+      "level": "초급",
+      "instructions": [
+        "케이블 머신 앞에 서서 한 손으로 핸들을 중립 그립으로 잡습니다",
+        "팔꿈치를 고정한 채 핸들을 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12 (각 팔)",
+      "alternatives": ["덤벨 해머 컬", "바벨 컬"],
+      "image": "/images/exercises/cable_hammer_curl.jpg"
+    },
+    {
+      "id": "rope_extension",
+      "name": "로프 익스텐션",
+      "muscle": ["삼두"],
+      "equipment": "머신",
+      "level": "중급",
+      "instructions": [
+        "케이블 머신 앞에 서서 로프를 잡습니다",
+        "팔꿈치를 고정한 채 아래로 밀어 내립니다",
+        "로프를 벌리며 삼두를 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 앞으로 기울임"],
+      "sets": "4×10~12",
+      "alternatives": ["트라이셉스 푸시다운", "오버헤드 익스텐션"],
+      "image": "/images/exercises/rope_extension.jpg"
+    },
+    {
+      "id": "triceps_kickback",
+      "name": "트라이셉스 킥백",
+      "muscle": ["삼두"],
+      "equipment": "덤벨",
+      "level": "초급",
+      "instructions": [
+        "한 손과 한 무릎을 벤치에 올립니다",
+        "다른 손으로 덤벨을 잡고 팔꿈치를 90도로 구부립니다",
+        "팔꿈치를 고정한 채 덤벨을 뒤로 밀어 냅니다",
+        "삼두를 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔듦"],
+      "sets": "4×10~12 (각 팔)",
+      "alternatives": ["트라이셉스 푸시다운", "오버헤드 익스텐션"],
+      "image": "/images/exercises/triceps_kickback.jpg"
+    },
+    {
+      "id": "nordic_curl",
+      "name": "노르딕 컬",
+      "muscle": ["햄스트링"],
+      "equipment": "맨몸",
+      "level": "상급",
+      "instructions": [
+        "무릎을 꿇고 앉습니다",
+        "발목을 고정합니다",
+        "몸을 앞으로 기울입니다",
+        "햄스트링으로 몸을 제어합니다",
+        "일어섭니다"
+      ],
+      "commonMistakes": ["너무 빠르게 떨어짐", "등을 구부림"],
+      "sets": "3×5~8",
+      "alternatives": ["레그 컬", "스티프 레그 데드리프트"],
+      "image": "/images/exercises/nordic_curl.jpg"
+    },
+    {
+      "id": "wall_sit",
+      "name": "월 시트",
+      "muscle": ["하체", "둔근"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "벽에 등을 대고 서 있습니다",
+        "무릎을 구부려 벽에 기대어 앉습니다",
+        "대퇴부가 바닥과 평행이 되도록 합니다",
+        "유지합니다"
+      ],
+      "commonMistakes": ["무릎이 발가락을 넘어감", "등을 벽에서 떨어뜨림"],
+      "sets": "3×30~60초",
+      "alternatives": ["스쿼트", "레그 프레스"],
+      "image": "/images/exercises/wall_sit.jpg"
+    },
+    {
+      "id": "band_leg_curl",
+      "name": "밴드 레그 컬",
+      "muscle": ["햄스트링"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발목에 고정합니다",
+        "다른 쪽 끝을 고정합니다",
+        "무릎을 구부려 발을 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["엉덩이를 들어 올림", "너무 빠르게 움직임"],
+      "sets": "4×10~12 (각 다리)",
+      "alternatives": ["레그 컬", "스티프 레그 데드리프트"],
+      "image": "/images/exercises/band_leg_curl.jpg"
+    },
+    {
+      "id": "band_extension",
+      "name": "밴드 익스텐션",
+      "muscle": ["대퇴사두"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발목에 고정합니다",
+        "다른 쪽 끝을 고정합니다",
+        "다리를 펴서 밴드를 당깁니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["등을 뒤로 과도하게 젖힘", "너무 빠르게 움직임"],
+      "sets": "4×10~12 (각 다리)",
+      "alternatives": ["레그 익스텐션", "스쿼트"],
+      "image": "/images/exercises/band_extension.jpg"
+    },
+    {
+      "id": "band_row",
+      "name": "밴드 로우",
+      "muscle": ["등", "이두"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발로 고정합니다",
+        "양손으로 밴드를 잡습니다",
+        "복부 쪽으로 당깁니다",
+        "등을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["등을 구부림", "어깨를 앞으로 내밀음"],
+      "sets": "4×10~12",
+      "alternatives": ["시티드 로우", "케이블 로우"],
+      "image": "/images/exercises/band_row.jpg"
+    },
+    {
+      "id": "band_lateral",
+      "name": "밴드 레터럴",
+      "muscle": ["어깨"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발로 고정합니다",
+        "양손으로 밴드를 잡습니다",
+        "팔을 옆으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["상체를 옆으로 기울임", "관성에 의존"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 레터럴 레이즈", "케이블 레터럴"],
+      "image": "/images/exercises/band_lateral.jpg"
+    },
+    {
+      "id": "band_rear_fly",
+      "name": "밴드 리어 플라이",
+      "muscle": ["어깨"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 앞에서 잡습니다",
+        "앞으로 약간 구부립니다",
+        "팔을 옆으로 벌립니다",
+        "어깨 뒤쪽을 수축시킵니다",
+        "천천히 원래 위치로 돌아옵니다"
+      ],
+      "commonMistakes": ["너무 무거운 밴드 사용", "등을 구부림"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 리어 델트 플라이", "케이블 리어 플라이"],
+      "image": "/images/exercises/band_rear_fly.jpg"
+    },
+    {
+      "id": "band_front",
+      "name": "밴드 프론트",
+      "muscle": ["어깨"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발로 고정합니다",
+        "양손으로 밴드를 잡습니다",
+        "팔을 앞으로 들어 올립니다",
+        "어깨 높이까지 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["너무 빠르게 움직임", "관성에 의존"],
+      "sets": "3×12~15",
+      "alternatives": ["덤벨 프론트 레이즈", "케이블 프론트 레이즈"],
+      "image": "/images/exercises/band_front.jpg"
+    },
+    {
+      "id": "band_curl",
+      "name": "밴드 컬",
+      "muscle": ["이두"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발로 고정합니다",
+        "양손으로 밴드를 잡습니다",
+        "팔꿈치를 고정한 채 밴드를 들어 올립니다",
+        "이두박근을 수축시킵니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12",
+      "alternatives": ["바벨 컬", "덤벨 컬"],
+      "image": "/images/exercises/band_curl.jpg"
+    },
+    {
+      "id": "band_hammer",
+      "name": "밴드 해머",
+      "muscle": ["이두", "전완"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "밴드를 발로 고정합니다",
+        "양손으로 밴드를 중립 그립으로 잡습니다",
+        "팔꿈치를 고정한 채 밴드를 들어 올립니다",
+        "천천히 내립니다"
+      ],
+      "commonMistakes": ["팔꿈치를 앞으로 움직임", "상체를 흔들어 올림"],
+      "sets": "4×10~12",
+      "alternatives": ["덤벨 해머 컬", "케이블 해머 컬"],
+      "image": "/images/exercises/band_hammer.jpg"
+    },
+    {
+      "id": "wall_sit",
+      "name": "벽 스쿼트",
+      "muscle": ["대퇴사두", "둔근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "벽에 등을 대고 서 있습니다",
+        "다리를 어깨 너비로 벌립니다",
+        "벽을 따라 천천히 내려갑니다",
+        "무릎이 90도가 될 때까지 내려갑니다",
+        "이 자세를 유지합니다"
+      ],
+      "commonMistakes": ["무릎이 발가락보다 앞으로 나옴", "등이 벽에서 떨어짐"],
+      "sets": "3×30초~1분",
+      "alternatives": ["스쿼트", "불가리안 스플릿 스쿼트"],
+      "image": "/images/exercises/wall_sit.jpg"
+    },
+    {
+      "id": "plank_up",
+      "name": "플랭크 업",
+      "muscle": ["코어", "어깨", "삼두"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "플랭크 자세로 시작합니다",
+        "한 손씩 팔꿈치에서 손바닥으로 올립니다",
+        "푸시업 자세가 됩니다",
+        "다시 팔꿈치로 내려갑니다",
+        "반복합니다"
+      ],
+      "commonMistakes": ["엉덩이가 올라감", "허리가 과도하게 휨"],
+      "sets": "3×10~15",
+      "alternatives": ["플랭크", "푸시업"],
+      "image": "/images/exercises/plank_up.jpg"
+    },
+    {
+      "id": "jumping_jacks",
+      "name": "팔벌려 뛰기",
+      "muscle": ["전신", "심폐"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "서서 팔을 옆으로 뻗습니다",
+        "다리를 벌리면서 팔을 위로 올립니다",
+        "다리를 모으면서 팔을 내립니다",
+        "반복합니다"
+      ],
+      "commonMistakes": ["너무 빠르게 움직임", "무릎에 무리"],
+      "sets": "3×20~30",
+      "alternatives": ["버피", "마운틴 클라이머"],
+      "image": "/images/exercises/jumping_jacks.jpg"
+    },
+    {
+      "id": "russian_twist",
+      "name": "러시안 트위스트",
+      "muscle": ["코어", "복근"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "바닥에 앉아 무릎을 구부립니다",
+        "상체를 약간 뒤로 기울입니다",
+        "팔을 앞으로 뻗습니다",
+        "상체를 좌우로 비틉니다",
+        "반복합니다"
+      ],
+      "commonMistakes": ["너무 빠르게 움직임", "등이 과도하게 구부러짐"],
+      "sets": "3×20~30",
+      "alternatives": ["크런치", "사이드 플랭크"],
+      "image": "/images/exercises/russian_twist.jpg"
+    },
+    {
+      "id": "high_knees",
+      "name": "무릎 올리기",
+      "muscle": ["하체", "심폐"],
+      "equipment": "맨몸",
+      "level": "초급",
+      "instructions": [
+        "서서 팔을 앞으로 뻗습니다",
+        "한 무릎씩 번갈아 가며 가슴까지 올립니다",
+        "빠르게 반복합니다",
+        "제자리에서 뛰듯이 움직입니다"
+      ],
+      "commonMistakes": ["너무 느리게 움직임", "무릎을 충분히 올리지 않음"],
+      "sets": "3×30초~1분",
+      "alternatives": ["버피", "마운틴 클라이머"],
+      "image": "/images/exercises/high_knees.jpg"
+    },
+    {
+      "id": "side_plank",
+      "name": "사이드 플랭크",
+      "muscle": ["코어", "복사근"],
+      "equipment": "맨몸",
+      "level": "중급",
+      "instructions": [
+        "옆으로 누워 팔꿈치를 어깨 아래에 둡니다",
+        "다리를 곧게 펴고 엉덩이를 올립니다",
+        "몸이 일직선이 되도록 유지합니다",
+        "이 자세를 유지합니다"
+      ],
+      "commonMistakes": ["엉덩이가 내려감", "머리가 떨어짐"],
+      "sets": "3×30초~1분",
+      "alternatives": ["플랭크", "러시안 트위스트"],
+      "image": "/images/exercises/side_plank.jpg"
+    }
+  ]
+}

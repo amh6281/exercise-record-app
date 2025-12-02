@@ -1,0 +1,226 @@
+{
+  "stretching": [
+    {
+      "id": "chest_stretch",
+      "name": "가슴 스트레칭",
+      "muscle": ["가슴", "어깨"],
+      "instructions": [
+        "벽 옆에 서서 팔을 벽에 대고 90도로 구부립니다",
+        "몸을 반대 방향으로 돌립니다",
+        "가슴 앞쪽이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/chest_stretch.jpg"
+    },
+    {
+      "id": "shoulder_stretch",
+      "name": "어깨 스트레칭",
+      "muscle": ["어깨"],
+      "instructions": [
+        "한 팔을 가슴 앞으로 가져옵니다",
+        "다른 팔로 팔꿈치를 잡아 당깁니다",
+        "어깨 뒤쪽이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/shoulder_stretch.jpg"
+    },
+    {
+      "id": "triceps_stretch",
+      "name": "삼두 스트레칭",
+      "muscle": ["삼두"],
+      "instructions": [
+        "한 팔을 머리 뒤로 구부립니다",
+        "다른 팔로 팔꿈치를 잡아 당깁니다",
+        "삼두가 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/triceps_stretch.jpg"
+    },
+    {
+      "id": "biceps_stretch",
+      "name": "이두 스트레칭",
+      "muscle": ["이두"],
+      "instructions": [
+        "벽에 손을 대고 팔을 뒤로 뻗습니다",
+        "몸을 앞으로 기울입니다",
+        "이두가 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/biceps_stretch.jpg"
+    },
+    {
+      "id": "back_stretch",
+      "name": "등 스트레칭",
+      "muscle": ["등"],
+      "instructions": [
+        "무릎을 꿇고 앉습니다",
+        "팔을 앞으로 뻗어 엎드립니다",
+        "등이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/back_stretch.jpg"
+    },
+    {
+      "id": "quad_stretch",
+      "name": "대퇴사두 스트레칭",
+      "muscle": ["대퇴사두"],
+      "instructions": [
+        "한 손으로 벽을 잡고 서 있습니다",
+        "한 발을 뒤로 구부려 발목을 잡습니다",
+        "대퇴사두가 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/quad_stretch.jpg"
+    },
+    {
+      "id": "hamstring_stretch",
+      "name": "햄스트링 스트레칭",
+      "muscle": ["햄스트링"],
+      "instructions": [
+        "바닥에 앉아 한 다리를 뻗습니다",
+        "상체를 앞으로 기울입니다",
+        "햄스트링이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/hamstring_stretch.jpg"
+    },
+    {
+      "id": "calf_stretch",
+      "name": "종아리 스트레칭",
+      "muscle": ["종아리"],
+      "instructions": [
+        "벽 앞에 서서 한 발을 뒤로 뻗습니다",
+        "뒤 다리를 곧게 펴고 앞으로 기울입니다",
+        "종아리가 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/calf_stretch.jpg"
+    },
+    {
+      "id": "hip_flexor_stretch",
+      "name": "고관절 스트레칭",
+      "muscle": ["고관절"],
+      "instructions": [
+        "한 무릎을 꿇고 앉습니다",
+        "다른 다리는 앞으로 구부립니다",
+        "엉덩이를 앞으로 밀어냅니다",
+        "고관절이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/hip_flexor_stretch.jpg"
+    },
+    {
+      "id": "glute_stretch",
+      "name": "둔근 스트레칭",
+      "muscle": ["둔근"],
+      "instructions": [
+        "바닥에 누워 한 무릎을 구부립니다",
+        "다른 다리를 올려 무릎 위에 올립니다",
+        "무릎을 잡아 가슴 쪽으로 당깁니다",
+        "둔근이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/glute_stretch.jpg"
+    },
+    {
+      "id": "neck_stretch",
+      "name": "목 스트레칭",
+      "muscle": ["목"],
+      "instructions": [
+        "서 있거나 앉아 있습니다",
+        "머리를 한쪽으로 기울입니다",
+        "반대편 손으로 머리를 살짝 당깁니다",
+        "목 옆쪽이 늘어나는 느낌을 느낍니다",
+        "30초간 유지합니다"
+      ],
+      "duration": "30초",
+      "image": "/images/stretching/neck_stretch.jpg"
+    },
+    {
+      "id": "full_body_stretch",
+      "name": "전신 스트레칭",
+      "muscle": ["전신"],
+      "instructions": [
+        "서서 팔을 위로 뻗습니다",
+        "한쪽으로 기울입니다",
+        "반대편으로 기울입니다",
+        "앞으로 구부립니다",
+        "각 동작을 10초씩 유지합니다"
+      ],
+      "duration": "1분",
+      "image": "/images/stretching/full_body_stretch.jpg"
+    }
+  ],
+  "warmup": [
+    {
+      "id": "light_jogging",
+      "name": "가벼운 조깅",
+      "duration": "5분",
+      "instructions": [
+        "가볍게 제자리 뛰기 또는 조깅을 합니다",
+        "심박수를 서서히 올립니다",
+        "근육을 따뜻하게 만듭니다"
+      ]
+    },
+    {
+      "id": "arm_circles",
+      "name": "팔 돌리기",
+      "duration": "1분",
+      "instructions": [
+        "팔을 옆으로 뻗습니다",
+        "앞으로 10번 돌립니다",
+        "뒤로 10번 돌립니다"
+      ]
+    },
+    {
+      "id": "leg_swings",
+      "name": "다리 흔들기",
+      "duration": "1분",
+      "instructions": [
+        "벽을 잡고 서 있습니다",
+        "한 다리를 앞뒤로 흔듭니다",
+        "좌우로 흔듭니다",
+        "반대편 다리로 반복합니다"
+      ]
+    },
+    {
+      "id": "torso_twist",
+      "name": "상체 비틀기",
+      "duration": "1분",
+      "instructions": [
+        "서서 팔을 옆으로 뻗습니다",
+        "상체를 좌우로 비틉니다",
+        "천천히 움직입니다"
+      ]
+    }
+  ],
+  "routines": [
+    {
+      "id": "10min_routine",
+      "name": "10분 스트레칭 루틴",
+      "duration": "10분",
+      "exercises": [
+        "가벼운 조깅",
+        "팔 돌리기",
+        "가슴 스트레칭",
+        "어깨 스트레칭",
+        "등 스트레칭",
+        "대퇴사두 스트레칭",
+        "햄스트링 스트레칭",
+        "종아리 스트레칭",
+        "전신 스트레칭"
+      ]
+    }
+  ]
+}
+
